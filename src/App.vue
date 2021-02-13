@@ -32,10 +32,6 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style>
 /* Font: Sniglet, Comfortaa  */
 @import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
@@ -80,7 +76,7 @@ export default {};
   font-weight: bold;
 }
 
-#main {
-  background: blue;
-}
+/* #main {
+  
+} */
 </style>
