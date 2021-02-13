@@ -1,57 +1,86 @@
 <template>
   <div id="app">
-    <header>Wach(ART)(DEV)</header>
+    <a class="route" href="/">
+      <header id="header">Wach(ART)(DEV)</header>
+    </a>
 
-    <!-- NAVBAR -->
     <nav id="navbar">
       <ul>
-        <li class="route">
-          <router-link to="/">Home</router-link>
+        <li>
+          <router-link class="route" to="/">Home</router-link>
         </li>
-        <li class="route">
-          <router-link to="/developer">Developer</router-link>
+        <li>
+          <router-link class="route" to="/developer">Developer</router-link>
         </li>
-        <li class="route">
-          <router-link to="/illustrator">Illustrator</router-link>
+        <li>
+          <router-link class="route" to="/illustrator">Illustrator</router-link>
         </li>
       </ul>
     </nav>
 
-    <router-view />
+    <main id="main">
+      <router-view />
+    </main>
+
+    <aside id="aside-bar">
+      <!-- Will work as an index of all content: About me, Experience, Finished Projects, Current Projects, Gallery -->
+    </aside>
+
+    <footer id="footer">
+      <!-- SOCIAL MEDIA: Github, Twitter, Instagram, etc... -->
+    </footer>
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style>
+/* Font: Sniglet, Comfortaa  */
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+#header {
+  font-family: "Sniglet";
+  font-size: 3rem;
+  color: white;
+}
+
+#header,
+#navbar {
+  background: red;
+  padding: 0.5rem;
 }
 
 #navbar {
-  background: none;
+  font-family: "Comfortaa";
+  font-weight: 700;
+  text-align: left;
 }
 
-#navbar .route {
-  color: #fff;
-  text-decoration: none;
-  font-style: none;
+#navbar li {
   list-style: none;
+  display: inline;
 }
 
-#navbar .route:visited {
-  color: blue;
+.route {
+  text-decoration: none;
+  color: #fff;
 }
 
 #navbar .route:hover {
   font-style: oblique;
   font-weight: bold;
+}
+
+#main {
+  background: blue;
 }
 </style>
