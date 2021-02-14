@@ -3,6 +3,7 @@
     <router-link id="wacha" to="/">
       <h1>Wachamuli</h1>
     </router-link>
+
     <ul id="routes-container">
       <li>
         <router-link class="route" to="/developer">Developer</router-link>
@@ -14,7 +15,8 @@
         <router-link class="route" to="#">Podcaster</router-link>
       </li>
     </ul>
-    <ul>
+
+    <ul id="sidebar-icon-container">
       <li>
         <router-link class="route" to="/">
           <i id="sidebar-icon" class="fas fa-indent fa-2x"></i>
@@ -28,48 +30,33 @@
 #wacha {
   text-decoration: none;
   color: #fff;
-  font-size: 22px;
-  /* margin-right: auto; */
-}
-
-#header {
-  font-family: "Sniglet", sans-serif;
-  font-size: 3rem;
-  color: white;
-}
-
-#header,
-#navbar {
-  background: red;
-  padding: 0.5rem;
+  font-size: 140%;
 }
 
 #navbar {
-  font-family: "Comfortaa";
   font-weight: 700;
-  padding: 1rem;
-
-  display: flex;
-  justify-content: center;
-}
-
-#navbar li {
-  list-style: none;
+  padding: 0.7%;
+  background: #EA2027;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .route {
   text-decoration: none;
-  padding: 0.5%;
   color: #fff;
 }
 
-/* 
-#sidebar-icon {
-  margin-left: 10rem;
+#routes-container {
+  display: flex;
+  justify-content: center;
 }
 
-#sidebar-icon:hover {
-  opacity: 0.7;
+#routes-container li {
+  margin: auto;
+}
+
+.route {
+  font-size: 150%;
 }
 
 .route:hover {
@@ -77,19 +64,12 @@
   font-weight: bold;
 }
 
-#navbar ul {
-  display: flex;
-  margin: auto;
+#sidebar-icon-container {
+  text-align: right;
 }
 
-#routes-container li {
-  padding-right: 1rem;
-  flex: 3;
-} */
-
-/* #navbar ul li {
-  justify-content: space-between;
-} */
-
+li {
+  list-style: none;
+}
 
 </style>
