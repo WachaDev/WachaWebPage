@@ -1,7 +1,9 @@
 <template>
   <div class="main-content">
+    <!-- Posible showcase in home route? -->
+    <section id="showcase"></section>
+
     <section class="quick-about">
-      <img src="https://picsum.photos/id/237/200/300" alt="" />
       <article class="article">
         <h1 class="title">Quick About</h1>
         <p>
@@ -23,13 +25,8 @@
           nihil
         </p>
       </article>
+      <img src="https://picsum.photos/id/237/200/300" alt="" />
     </section>
-
-    <section class="experiencie"></section>
-    <section class="finished-projects"></section>
-    <section class="current-projects"></section>
-    <section class="gallery"></section>
-
   </div>
 </template>
 
@@ -38,14 +35,15 @@
 .quick-about {
   display: grid;
   margin-top: 1rem;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid black; /* TODO: Temporal, remove this */
+  background: #ffff;
+  /* border: 1px solid black; TODO: Temporal, remove this */
   padding: 4%;
 }
 
-img {
+.quick-about img {
   display: block;
   border-radius: 8%;
   margin-left: auto;
@@ -57,5 +55,4 @@ img {
   text-align: center;
   font-size: 5rem;
 }
-
 </style>

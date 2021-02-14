@@ -1,0 +1,5 @@
+These are the sections:
+<section class="experiencie"></section>
+<section class="finished-projects"></section>
+<section class="current-projects"></section>
+<section class="gallery"></section>
