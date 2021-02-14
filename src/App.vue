@@ -5,9 +5,9 @@
     <SideBar />
     <!-- Redundant this main? -->
     <main id="main">
-      <router-view />
+      <!-- <router-view /> -->
     </main>
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
@@ -45,39 +45,5 @@ export default {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23d45656' fill-opacity='0.59'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-#header {
-  font-family: "Sniglet";
-  font-size: 3rem;
-  color: white;
-}
-
-#header,
-#navbar {
-  background: red;
-  padding: 0.5rem;
-}
-
-/* start NAVBAR styles */
-#navbar {
-  font-family: "Comfortaa";
-  font-weight: 700;
-  text-align: left;
-}
-
-#navbar li {
-  list-style: none;
-  display: inline;
-}
-/* end NAVBAR styles */
-
-.route {
-  text-decoration: none;
-  color: #fff;
-}
-
-#navbar .route:hover {
-  font-style: oblique;
-  font-weight: bold;
-}
 
 </style>
