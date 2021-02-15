@@ -28,7 +28,6 @@
 
 <style scoped>
 #wacha {
-  text-decoration: none;
   color: #fff;
   font-size: 140%;
 }
@@ -36,13 +35,13 @@
 #navbar {
   font-weight: 700;
   padding: 0.7%;
-  background: #EA2027;
+  background: black;
+  /* #EA2027 */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .route {
-  text-decoration: none;
   color: #fff;
 }
 

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- Who I am, my doned and current roadmap, my fascination for these art, sciencie and posible other media. -->
     <section class="quick-about">
       <article class="article">
+        <!-- Similar to "Who Am I" but oriented to the specific job. -->
         <h1 class="title">Quick About</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quae
