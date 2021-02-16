@@ -1,11 +1,12 @@
 <template>
   <div class="main-content">
     <!-- Posible showcase in home route? -->
-    <div id="dashboar-container">
+    <div id="dashboard-container">
       <section id="dashboard">
         <div id="dashboard-left-side">
           <div class="logo">
             <img src="" alt="" />
+            <pre></pre>
           </div>
           <h1 class="brand-name"></h1>
         </div>
@@ -13,7 +14,7 @@
         <div id="dashboard-right-side">
           <div id="dashboard-title-container">
             <h1 id="dashboard-title">
-              What Are <strong>You</strong> Looking For?
+              What Are You Looking For?
             </h1>
           </div>
           <div class="contact-for">
@@ -76,35 +77,43 @@
             Most Loved Works <i class="fas fa-heart hvr-icon"></i>
           </h1>
         </div>
-        <div class="gallery1">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            repellendus! Quae a aperiam pariatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            repellendus! Quae a aperiam pariatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            repellendus! Quae a aperiam pariatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            repellendus! Quae a aperiam pariatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            repellendus! Quae a aperiam pariatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, corporis modi. Accusamus exercitationem alias ullam
-            error ratione est ipsum amet omnis, qui ipsam magnam quaerat
-            repellendus! Quae a aperiam pariatur?
-          </p>
+        <div class="gallery-container">
+          <div class="gallery1">
+            <div id="image-section1">
+              <img
+                class="image1"
+                src="https://picsum.photos/seed/picsum/200/300"
+                alt=""
+              />
+
+              <img
+                class="image3"
+                src="https://picsum.photos/200/300/?blur=2"
+                alt=""
+              />
+              <img
+                class="image5"
+                src="https://picsum.photos/id/237/200/300"
+                alt=""
+              />
+              <img
+                class="image6"
+                src="https://picsum.photos/200/300.jpg"
+                alt=""
+              />
+            </div>
+            <img
+              class="image2"
+              src="https://picsum.photos/200/300?grayscale"
+              alt=""
+            />
+          </div>
+          <router-link class="hvr-icon-forward" to="/gallery">
+            <i class="fas fa-long-arrow-alt-right hvr-icon"></i> See all
+          </router-link>
         </div>
       </section>
+      <!-- <button v-on:click="topPage()">Top</button> -->
     </div>
   </div>
 </template>
@@ -114,22 +123,31 @@ export default {
   methods: {
     redirect: function(path) {
       this.$router.push({ path });
+    },
+    topPage: function() {
+      scroll({
+        top: window.top,
+        behavior: "smooth"
+      });
     }
-  }
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+#dashboard-container {
+  background: #ea2027;
+  border-bottom: 9px dotted #ffff;
+  margin-bottom: 3%;
+}
 
 #dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #ea2027;
   padding: 2rem;
-  margin-bottom: 3%;
+  margin-right: 17rem;
+  margin-left: 17rem;
 }
 
 #dashboard-left-side {
@@ -137,7 +155,17 @@ export default {
   justify-content: center;
 }
 
+.logo {
+  background: #ffff;
+  padding-right: 16.5rem;
+  padding-left: 13rem;
+  border-radius: 150px;
+}
+
 #dashboard-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #dashboard-title {
@@ -145,7 +173,7 @@ export default {
   font-size: 2rem;
   text-align: left;
   color: #ffff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contact-for {
@@ -154,7 +182,12 @@ export default {
 }
 
 .contact-for button {
-  background: #ea2027;
+  cursor: pointer;
+  background: #c71919;
+  /* #c0392b */
+  /* #ED4C67 */
+  /* #ff3838 */
+  /* #d63031 */
   color: white;
   padding: 0.5rem;
   width: 16rem;
@@ -169,12 +202,13 @@ export default {
 .contact-for button:focus,
 .contact-for button:active {
   background: #ffff;
-  color: red;
+  color: #ea2027;
 }
 
 .developer-btn {
   font-family: "Anton", sans-serif;
   font-size: 1.5rem;
+  width: 1rem;
 }
 
 .podcaster-btn {
@@ -185,10 +219,6 @@ export default {
 .illustrator-btn {
   font-family: "Lobster", cursive;
   font-size: 1.6rem;
-}
-
-#developer-btn-icon {
-
 }
 
 #podcaster-btn-icon {
@@ -210,7 +240,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   background: #ffff;
   box-shadow: -2.7rem 2.4rem #d63031;
-  border: #d63031 solid;
+  border: 5px double #d63031;
   padding: 6rem;
   margin-bottom: 6rem;
 }
@@ -220,7 +250,7 @@ export default {
   color: #ea2027;
   font-size: 3rem;
   text-align: center;
-  padding: 1rem;
+  margin: 1rem;
 }
 
 .paragraph {
@@ -231,16 +261,32 @@ export default {
 #most-loved-works {
   background: #ffff;
   box-shadow: 2.7rem 2.4rem #d63031;
-  border: #d63031 solid;
+  border: solid;
   margin-bottom: 6rem;
+  text-align: center;
+  border: 5px double #ea2027;
 }
 
 .gallery1 {
   display: grid;
-  grid-template-rows: 2fr 1fr;
-  grid-template-columns: 4fr 2fr 2fr;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.gallery1 .image1 {
+  /* grid-column: 1/3; */
+  height: 20rem;
+  width: 40rem;
+}
+
+.gallery1 .image2 {
+  height: 40rem;
+  width: 17rem;
+}
+
+.gallery1 * {
   border: 1px solid black;
-  padding: 2rem;
 }
 </style>
