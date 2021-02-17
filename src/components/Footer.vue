@@ -12,7 +12,7 @@
             <a href="#">
               <i id="youtube-icon" class="fab fa-youtube social-icon"></i>
             </a>
-            <a href="#">
+            <a href="https://github.com/">
               <i id="github-icon" class="fab fa-github social-icon"></i>
             </a>
             <a href="#">

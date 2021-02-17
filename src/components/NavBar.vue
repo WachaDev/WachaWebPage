@@ -19,7 +19,7 @@
     <ul id="sidebar-icon-container">
       <li>
         <router-link class="route" to="/">
-          <i id="sidebar-icon" class="fas fa-indent fa-2x"></i>
+          <i id="sidebar-icon" class="fas fa-align-justify"></i>
         </router-link>
       </li>
     </ul>

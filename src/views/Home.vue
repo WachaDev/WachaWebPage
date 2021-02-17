@@ -20,8 +20,9 @@
           <div class="contact-for">
             <button
               class="developer-btn hvr-fade  hvr-icon-wobble-horizontal"
-              v-on:click="redirect('/developer')"
+              v-on:click="openSideBar()" 
             >
+            <!-- Change openSideBar to redirect("/developer") -->
               Developer
               <i
                 id="developer-btn-icon"
@@ -30,8 +31,9 @@
             </button>
             <button
               class="podcaster-btn  hvr-fade hvr-icon-wobble-horizontal"
-              v-on:click="redirect('/podcaster')"
+              v-on:click="closeSideBar()"
             >
+            <!-- Change openSideBar to redirect("/podcaster") -->
               Podcaster
               <i
                 id="podcaster-btn-icon"
@@ -121,16 +123,26 @@
 <script>
 export default {
   methods: {
+    openSideBar: function() {
+      const sideBar = document.getElementById("side-bar");
+      sideBar.style.width = "300px";
+    },
+
+    closeSideBar: function() {
+      const sideBar = document.getElementById("side-bar");
+      sideBar.style.width = "0px";
+    },
     redirect: function(path) {
       this.$router.push({ path });
     },
+
     topPage: function() {
       scroll({
         top: window.top,
         behavior: "smooth"
       });
     }
-  },
+  }
 };
 </script>
 
@@ -239,8 +251,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #ffff;
-  box-shadow: -2.7rem 2.4rem #d63031;
-  border: 5px double #d63031;
+  box-shadow: -2.7rem 2.4rem #c71919;
+  border: 5px double #ea2027;
   padding: 6rem;
   margin-bottom: 6rem;
 }
@@ -260,7 +272,7 @@ export default {
 
 #most-loved-works {
   background: #ffff;
-  box-shadow: 2.7rem 2.4rem #d63031;
+  box-shadow: 2.7rem 2.4rem #c71919;
   border: solid;
   margin-bottom: 6rem;
   text-align: center;
