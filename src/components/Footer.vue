@@ -53,8 +53,8 @@ export default {
 }
 
 #goto-btn-container {
-  padding-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 #goto-btn {

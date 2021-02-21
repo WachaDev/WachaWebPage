@@ -1,70 +1,58 @@
 <template>
   <aside id="side-bar">
     <div id="inner-side-bar">
-      <i id="sidebar-icon" class="fas fa-align-justify"></i>
+      <!-- <i id="sidebar-icon" class="fas fa-align-justify"></i> -->
       <h4>Views</h4>
       <div class="views">
-        <router-link
+        <button
+          id="home-view"
           class="side-bar-action"
           v-bind:class="{ 'current-view': isCurrentView }"
-          to="/"
+          v-on:click="redirect('/')"
         >
-          <i class="fas fa-home"></i> Home
-        </router-link>
-        <router-link
+          <i class="icon fas fa-home"></i> Home
+        </button>
+        <button
+          id="developer-view"
           class="side-bar-action"
           v-bind:class="{ 'current-view': isCurrentView }"
-          to="/developer"
+          v-on:click="redirect('/developer')"
         >
-          <i class="fas fa-code"></i> Developer</router-link
-        >
-        <router-link
+          <i class="icon fas fa-code"></i> Developer
+        </button>
+        <button
+          id="podcaster-view"
           class="side-bar-action"
           v-bind:class="{ 'current-view': isCurrentView }"
-          to="/podcaster"
+          v-on:click="redirect('/podcaster')"
         >
-          <i class="fas fa-microphone-alt"></i> Podcaster</router-link
-        >
-        <router-link
+          <i class="icon fas fa-microphone-alt"></i> Podcaster
+        </button>
+        <button
+          id="illustrator-view"
           class="side-bar-action"
           v-bind:class="{ 'current-view': isCurrentView }"
-          to="/illustrator"
+          v-on:click="redirect('/illustrator')"
         >
-          <i class="fas fa-palette"></i> Illustrator</router-link
-        >
+          <i class="icon fas fa-palette"></i> Illustrator
+        </button>
       </div>
       <h4>Sections</h4>
       <div class="sections">
-        <button
-          class="side-bar-action"
-          v-bind:class="{ 'current-view': isCurrentView }"
-          v-on:click="goto('most-loved-works')"
-        >
-          <i class="fas fa-award"></i> Experiencie
+        <button class="side-bar-action" v-on:click="goto('most-loved-works')">
+          <i class="icon fas fa-award"></i> Experiencie
         </button>
-        <button
-          class="side-bar-action"
-          v-bind:class="{ 'current-view': isCurrentView }"
-          v-on:click="goto('finished-projects')"
-        >
-          <i class="fas fa-tasks"></i> Finished projects
+        <button class="side-bar-action" v-on:click="goto('finished-projects')">
+          <i class="icon fas fa-tasks"></i> Finished projects
         </button>
-        <button
-          class="side-bar-action"
-          v-bind:class="{ 'current-view': isCurrentView }"
-          v-on:click="goto('current-projects')"
-        >
-          <i class="fas fa-hourglass-half"></i> Current projects
+        <button class="side-bar-action" v-on:click="goto('current-projects')">
+          <i class="icon fas fa-hourglass-half"></i> Current projects
         </button>
-        <button
-          class="side-bar-action"
-          v-bind:class="{ 'current-view': isCurrentView }"
-          v-on:click="goto('gallery')"
-        >
-          <i class="fas fa-images"></i> Gallery
+        <button class="side-bar-action" v-on:click="goto('gallery')">
+          <i class="icon fas fa-images"></i> Gallery
         </button>
         <div id="bottom-shadow-container">
-          <div id="bottom-shadow">as</div>
+          <div id="bottom-shadow"></div>
         </div>
       </div>
     </div>
@@ -81,9 +69,19 @@ export default {
   },
 
   methods: {
+    redirect: function(path) {
+      // TODO: Convert this to a global function.
+      this.$router.push({ path });
+    },
+
     openSideBar: function() {
       const sideBar = document.getElementById("side-bar");
+      const content = document.getElementById("main");
+
       sideBar.style.width = "300px";
+      // Obscure the main content.
+      content.style.webkitFilter = "blur(5px)";
+      content.style.filter = "blur(5px)";
     },
 
     closeSideBar: function() {
@@ -98,18 +96,14 @@ export default {
   },
 
   computed: {
-    currentRoute: function() {
-      return this.$route.path;
-    },
-
     highlightCurrentView: function() {
       const sideBarActions = document.getElementsByClassName("side-bar-action");
       for (let action of sideBarActions) {
         // Get path contained in sideBarActions
         let path = action.getAttribute("href");
         // Is that path the current one?
-        if (path.includes(this.currentRoute)) {
-          console.log(`current route: ${this.currentRoute}, path: ${path}`);
+        if (path.includes(this.$route.fullPath)) {
+          console.log(`current route: ${this.currentRoute}, path: ${path}`); // TODO: Remove this.
           return true;
         }
       }
@@ -119,14 +113,11 @@ export default {
 </script>
 
 <style scoped>
-.ho {
-  color: violet;
-}
 #side-bar {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   color: rgb(116, 112, 112);
   position: fixed;
-  top: 0px;
+  top: 3.9rem;
   left: 0px;
   height: 100%;
   width: 300px;
@@ -148,15 +139,24 @@ export default {
   justify-content: start;
 }
 
+.icon {
+  /* color: #c71919; */
+}
+
 .side-bar-action {
-  font-size: 1.3rem;
+  padding: 0.5rem;
+  font-size: 1.2em;
   background: #ffff;
   border-style: none;
+  /* border: 1px solid #c71919; */
+  /* border-left: none; */
+  /* border-right: none; */
+  color: grey;
 }
 
 .side-bar-action:hover {
-  border-left: 3px;
-  border-color: red;
+  border-left: 6px solid #c71919;
+  color: #c71919;
 }
 
 button {
@@ -174,18 +174,15 @@ button {
   text-align: left;
 }
 
-#botton-shadow-container {
+#bottom-shadow-container {
   position: absolute;
   bottom: 0;
-  top: 33px;
-  padding-top: 2rem;
+  top: 56rem;
+  margin-top: 2rem;
   background: #c71919;
 }
 
 .current-view {
   color: green;
 }
-/* #side-bar .sections button { 
-
-} */
 </style>
