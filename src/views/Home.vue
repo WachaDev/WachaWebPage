@@ -20,9 +20,9 @@
           <div class="contact-for">
             <button
               class="developer-btn hvr-fade  hvr-icon-wobble-horizontal"
-              v-on:click="openSideBar()" 
+              v-on:click="openSideBar()"
             >
-            <!-- Change openSideBar to redirect("/developer") -->
+              <!-- Change openSideBar to redirect("/developer") -->
               Developer
               <i
                 id="developer-btn-icon"
@@ -33,7 +33,7 @@
               class="podcaster-btn  hvr-fade hvr-icon-wobble-horizontal"
               v-on:click="closeSideBar()"
             >
-            <!-- Change openSideBar to redirect("/podcaster") -->
+              <!-- Change openSideBar to redirect("/podcaster") -->
               Podcaster
               <i
                 id="podcaster-btn-icon"
@@ -71,6 +71,13 @@
             </p>
           </div>
         </div>
+        <div id="who-am-i-left-side">
+          <img
+            class="image"
+            src="https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y"
+            alt=""
+          />
+        </div>
       </section>
 
       <section id="most-loved-works">
@@ -87,7 +94,11 @@
                 src="https://picsum.photos/seed/picsum/200/300"
                 alt=""
               />
-
+              <img
+                class="image2"
+                src="https://picsum.photos/200/300?grayscale"
+                alt=""
+              />
               <img
                 class="image3"
                 src="https://picsum.photos/200/300/?blur=2"
@@ -104,11 +115,6 @@
                 alt=""
               />
             </div>
-            <img
-              class="image2"
-              src="https://picsum.photos/200/300?grayscale"
-              alt=""
-            />
           </div>
           <router-link class="hvr-icon-forward" to="/gallery">
             <i class="fas fa-long-arrow-alt-right hvr-icon"></i> See all
@@ -214,6 +220,7 @@ export default {
 .contact-for button:focus,
 .contact-for button:active {
   background: #ffff;
+  border-color: #c71919;
   color: #ea2027;
 }
 
@@ -251,10 +258,24 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #ffff;
-  box-shadow: -2.7rem 2.4rem #c71919;
+  box-shadow: -2.7rem 2.7rem #c71919;
   border: 5px double #ea2027;
+  border-radius: 25px;
   padding: 6rem;
   margin-bottom: 6rem;
+}
+
+#who-am-i-right-side {
+  padding: 1rem;
+}
+
+#who-am-i-left-side {
+  padding: 1rem;
+}
+
+.image {
+  width: 400px;
+  height: 300px;
 }
 
 .title {
@@ -272,7 +293,8 @@ export default {
 
 #most-loved-works {
   background: #ffff;
-  box-shadow: 2.7rem 2.4rem #c71919;
+  box-shadow: 2.7rem 2.7rem #c71919;
+  border-radius: 25px;
   border: solid;
   margin-bottom: 6rem;
   text-align: center;
@@ -281,14 +303,15 @@ export default {
 
 .gallery1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
   gap: 5px;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 .gallery1 .image1 {
-  /* grid-column: 1/3; */
+  grid-column: 1/3;
   height: 20rem;
   width: 40rem;
 }
@@ -298,7 +321,8 @@ export default {
   width: 17rem;
 }
 
+/*
 .gallery1 * {
   border: 1px solid black;
-}
+}  */
 </style>

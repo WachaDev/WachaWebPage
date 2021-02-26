@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <Header /> -->
-    <NavBar />
+    <!-- <NavBar /> -->
     <SideBar />
     <!-- Redundant this main? -->
     <main id="main">
