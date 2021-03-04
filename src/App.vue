@@ -51,4 +51,28 @@ export default {
 a {
   text-decoration: none;
 }
+
+.section {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: auto;
+}
+
+.image {
+  width: 400px;
+  height: 300px;
+}
+
+.title {
+  font-family: "Fugaz One";
+  color: #ea2027;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  text-align: center;
+}
 </style>

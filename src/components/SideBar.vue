@@ -6,44 +6,40 @@
           <h4>Views</h4>
         </div>
         <div class="views-container">
-          <div class="view-action-container">
+          <div class="view-action-container side-bar-action">
             <i class="icon fas fa-home"></i>
             <button
               id="home-view"
-              class="side-bar-action"
               v-bind:class="{ 'current-view': isCurrentView }"
               v-on:click="redirect('/')"
             >
               Home
             </button>
           </div>
-          <div class="view-action-container">
+          <div class="view-action-container side-bar-action">
             <i class="icon fas fa-code"></i>
             <button
               id="developer-view"
-              class="side-bar-action"
               v-bind:class="{ 'current-view': isCurrentView }"
               v-on:click="redirect('/developer')"
             >
               Developer
             </button>
           </div>
-          <div class="view-action-container">
+          <div class="view-action-container side-bar-action">
             <i class="icon fas fa-microphone-alt"></i>
             <button
               id="podcaster-view"
-              class="side-bar-action"
               v-bind:class="{ 'current-view': isCurrentView }"
               v-on:click="redirect('/podcaster')"
             >
               Podcaster
             </button>
           </div>
-          <div class="view-action-container">
+          <div class="view-action-container side-bar-action">
             <i class="icon fas fa-palette"></i>
             <button
               id="illustrator-view"
-              class="side-bar-action"
               v-bind:class="{ 'current-view': isCurrentView }"
               v-on:click="redirect('/illustrator')"
             >
@@ -58,36 +54,33 @@
           <h4>Sections</h4>
         </div>
         <div class="section-container">
-          <div class="section-action-container">
+          <div class="section-action-container side-bar-action">
             <i class="icon fas fa-award"></i>
             <button
-              class="side-bar-action"
               v-on:click="goto('most-loved-works')"
             >
               Experiencie
             </button>
           </div>
-          <div class="section-action-container">
+          <div class="section-action-container side-bar-action">
             <i class="icon fas fa-tasks"></i>
             <button
-              class="side-bar-action"
               v-on:click="goto('finished-projects')"
             >
               Finished projects
             </button>
           </div>
-          <div class="section-action-container">
+          <div class="section-action-container side-bar-action">
             <i class="icon fas fa-hourglass-half"></i>
             <button
-              class="side-bar-action"
               v-on:click="goto('current-projects')"
             >
               Current projects
             </button>
           </div>
-          <div class="section-action-container">
+          <div class="section-action-container side-bar-action">
             <i class="icon fas fa-images"></i>
-            <button class="side-bar-action" v-on:click="goto('gallery')">
+            <button v-on:click="goto('gallery')">
               Gallery
             </button>
           </div>
@@ -180,7 +173,7 @@ export default {
   justify-content: start;
 }
 
-.side-bar-action {
+.side-bar-action button {
   padding: 0.5rem;
   font-size: 1.2em;
   background: #ffff;
@@ -192,6 +185,7 @@ export default {
 }
 
 .side-bar-action:hover {
+  cursor: pointer;
   border-left: 6px solid #c71919;
   color: #c71919;
 }

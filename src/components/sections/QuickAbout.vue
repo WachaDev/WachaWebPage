@@ -40,7 +40,7 @@ export default {
   width: 50%;
 }
 
-.title {
+.title { /* TODO: Global */
   text-align: center;
   font-size: 5rem;
 }
