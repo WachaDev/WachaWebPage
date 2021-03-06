@@ -154,7 +154,7 @@ export default {
   top: 3.9rem;
   left: 0px;
   height: 100%;
-  width: 300px;
+  width: 0px;
   background: #ffff;
   z-index: 1;
   overflow-x: hidden;
