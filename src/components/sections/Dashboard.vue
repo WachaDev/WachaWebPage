@@ -97,13 +97,13 @@
             </div>
           </div>
 
-          <div id="dedicated">
+          <div id="passionate">
             <div class="aptitude-container">
               <div class="icon-container">
                 <i class="fas fa-fire"></i>
               </div>
               <div class="subtitle-container">
-                <h3 class="subtitle">Dedicated</h3>
+                <h3 class="subtitle">Passionate</h3>
               </div>
               <div class="paragraph-container">
                 <p class="paragraph">
@@ -250,10 +250,12 @@ export default {
 #aptitudes-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 15px;
   text-align: center;
-  padding: 5%;
-  /* margin-bottom: 12px; */
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-left: 5%;
+  margin-bottom: 2.5%;
   color: #fff;
   font-weight: bold;
   /* background: #c71919; */
