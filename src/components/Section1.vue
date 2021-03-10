@@ -2,7 +2,7 @@
   <section class="section" :class="{ 'boxShadowRight': styles.boxShadowReverse }">
     <div class="section-left-side" :class="{ 'toRight': styles.sideReverse }">
       <div class="title-container">
-        <h1 class="title">{{ content.title }}</h1>
+        <h1 class="title nice-border">{{ content.title }}</h1>
       </div>
       <div class="paragraph-container">
         <p class="paragraph ">{{ content.paragraph }}</p>

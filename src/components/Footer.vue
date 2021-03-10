@@ -24,7 +24,9 @@
           </div>
         </div>
         <div class="email-container">
-          <pre class="email">Personal e-mail: josemrr27@gmail.com    Business e-mail: wachamuli@businessman.com</pre>
+          <pre class="email">
+Personal e-mail: josemrr27@gmail.com    Business e-mail: wachamuli@businessman.com</pre
+          >
         </div>
       </footer>
     </div>
