@@ -9,7 +9,7 @@
       }"
       :content="{
         title: 'Who Am I?',
-        paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Culpa nam quam, dolorem pariatur placeat corrupti inventore
           maiores. Voluptate alias hic mollitia incidunt adipisci,
           consectet quasi. Aut assumenda consectetur vero dicta fugit
@@ -46,7 +46,12 @@
           'https://picsum.photos/200/300?grayscale',
           'https://picsum.photos/200/300/?blur=2',
           'https://picsum.photos/id/237/200/300',
-          'https://picsum.photos/200/300.jpg'
+          'https://picsum.photos/200/300.jpg',
+          'https://www.fillmurray.com/640/360',
+          'https://picsum.photos/id/870/200/300?grayscale&blur=2',
+          'https://picsum.photos/id/870/200/300?grayscale&blur=2',
+          'https://picsum.photos/id/870/200/300?grayscale&blur=2',
+          'https://picsum.photos/id/870/200/300?grayscale&blur=2'
         ]
       }"
     />

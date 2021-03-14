@@ -140,8 +140,9 @@ export default {
 
 <style scoped>
 #dashboard {
-  background: #ea2027;
+  background: #c9050b;
   border-bottom: 9px dotted #ffff;
+  border-width: 10px;
   margin-bottom: 3%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -184,7 +185,7 @@ export default {
 #dashboard-title {
   font-family: "Fugaz One", cursive;
   font-size: 2rem;
-  text-shadow: -6px 6px rgb(0, 0, 0, 0.2);
+  text-shadow: -6px 6px rgb(0, 0, 0, 0.6);
   text-align: left;
   color: #ffff;
   margin-top: 1rem;
@@ -198,7 +199,7 @@ export default {
 
 .contact-for button {
   cursor: pointer;
-  background: #c71919;
+  background: #a51212;
   color: white;
   padding: 0.5rem;
   width: 16rem;
@@ -213,7 +214,7 @@ export default {
 .contact-for button:focus,
 .contact-for button:active {
   background: #ffff;
-  border-color: #c71919;
+  border-color: #a51212;
   /* border-style: double; */
   color: #ea2027;
 }
@@ -255,14 +256,14 @@ export default {
   margin-top: 5%;
   margin-left: 5%;
   margin-left: 5%;
-  margin-bottom: 2.5%;
+  margin-bottom: 5%;
   color: #fff;
   font-weight: bold;
   /* background: #c71919; */
 }
 
 .aptitude-container {
-  background: #c71919;
+  background: #a51212;
   padding: 1rem;
 }
 

@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
 #footer-container {
-  background: #ea2027;
+  background: #c9050b;
 }
 
 #goto-btn-container {
@@ -98,7 +98,7 @@ export default {
 }
 
 #bottom-footer {
-  background: #c71919;
+  background: #a51212;
   font-size: 1rem;
   padding: 2rem;
   /* #c71919 */

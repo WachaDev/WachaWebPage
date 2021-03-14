@@ -48,7 +48,7 @@ export default {
   border-radius: 25px;
   padding: 6rem;
   margin-bottom: 6rem;
-  box-shadow: -2.7rem 2.7rem #c71919;
+  /* box-shadow: -2.7rem 2.7rem #c71919; */
 }
 
 .boxShadowRight {
