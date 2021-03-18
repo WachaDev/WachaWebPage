@@ -2,6 +2,7 @@
   <div id="app">
     <!-- <Header /> -->
     <!-- <NavBar /> -->
+    <SideBarBtn />
     <SideBar />
     <main id="main">
       <router-view />
@@ -13,6 +14,7 @@
 <script>
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import SideBarBtn from "./components/SideBarBtn";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 
@@ -20,6 +22,7 @@ export default {
   components: {
     Header,
     NavBar,
+    SideBarBtn,
     SideBar,
     Footer
   }
@@ -43,8 +46,9 @@ export default {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #E1E7E4;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23a3a0a2' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #ffff;
+  /* #E1E7E4 */
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23a3a0a2' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"); */
 }
 
 a {
@@ -52,9 +56,9 @@ a {
 }
 
 .section {
-  margin-left: 20%;
+  /* margin-left: 20%;
   margin-right: 20%;
-  margin-bottom: auto;
+  margin-bottom: auto; */
 }
 
 .image {
@@ -64,11 +68,11 @@ a {
 
 .title {
   font-family: "Fugaz One";
-  color: #ea2027;
+  color: #c9050b;
   font-size: 3rem;
   text-align: center;
   margin: 1rem;
-  text-shadow: -6px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: -6px 6px rgba(0, 0, 0, 0.35);
 }
 
 .paragraph {

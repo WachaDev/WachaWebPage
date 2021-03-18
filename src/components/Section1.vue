@@ -1,15 +1,23 @@
 <template>
-  <section class="section" :class="{ 'boxShadowRight': styles.boxShadowReverse }">
-    <div class="section-left-side" :class="{ 'toRight': styles.sideReverse }">
-      <div class="title-container">
-        <h1 class="title nice-border">{{ content.title }}</h1>
+  <section
+    class="section"
+    :class="{
+      boxShadowRight: styles.boxShadowReverse,
+      box: styles.altBackground
+    }"
+  >
+    <div class="section-container">
+      <div class="section-left-side" :class="{ toRight: styles.sideReverse }">
+        <div class="title-container">
+          <h1 class="title nice-border">{{ content.title }}</h1>
+        </div>
+        <div class="paragraph-container">
+          <p class="paragraph ">{{ content.paragraph }}</p>
+        </div>
       </div>
-      <div class="paragraph-container">
-        <p class="paragraph ">{{ content.paragraph }}</p>
+      <div class="section-right-side" :class="{ toLeft: styles.sideReverse }">
+        <img class="image" :src="content.picture" alt="" />
       </div>
-    </div>
-    <div class="section-right-side" :class="{ 'toLeft': styles.sideReverse }">
-      <img class="image" :src="content.picture" alt="" />
     </div>
   </section>
 </template>
@@ -19,7 +27,7 @@ export default {
   props: {
     styles: {
       boxShadowReverse: Boolean,
-      sideReverse: Boolean
+      sideReverse: Boolean,
     },
     content: {
       title: {
@@ -34,25 +42,30 @@ export default {
         type: String,
         required: true
       }
-    },
+    }
   }
 };
 </script>
 
 <style scoped>
 .section {
+  /* padding: 1rem; */
+}
+
+.section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #ffff;
-  border: 5px double #ea2027;
-  border-radius: 25px;
-  padding: 6rem;
-  margin-bottom: 6rem;
-  /* box-shadow: -2.7rem 2.7rem #c71919; */
+  border-bottom: 1px solid black;
+  margin-left: 13rem;
+  margin-right: 13rem;
+  padding: 5rem;
+  /* padding-top: 2.5rem; */
+  /* padding-bottom: 2.5rem; */
 }
 
 .boxShadowRight {
-  box-shadow: 2.7rem 2.7rem #c71919;
+  /* box-shadow: 2.7rem 2.7rem #c71919; */
 }
 
 .toLeft {
@@ -77,13 +90,16 @@ export default {
 }
 
 .section-right-side {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   padding: 1rem;
 }
 
 .image {
   width: 400px;
   height: 300px;
-  border-radius: 15rem;
+  border-radius: 10px;
 }
 
 .paragraph {

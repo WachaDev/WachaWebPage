@@ -141,8 +141,9 @@ export default {
 <style scoped>
 #dashboard {
   background: #c9050b;
-  border-bottom: 9px dotted #ffff;
+  /* border-bottom: dotted #ffff; */
   border-width: 10px;
+  padding-bottom: 3%;
   margin-bottom: 3%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -251,7 +252,7 @@ export default {
 #aptitudes-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 29px;
   text-align: center;
   margin-top: 5%;
   margin-left: 5%;
@@ -265,6 +266,7 @@ export default {
 .aptitude-container {
   background: #a51212;
   padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .subtitle-container {

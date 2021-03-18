@@ -22,7 +22,7 @@
     <Section
       :styles="{
         boxShadowReverse: true,
-        sideReverse: true
+        sideReverse: true,
       }"
       :content="{
         title: 'Experience',

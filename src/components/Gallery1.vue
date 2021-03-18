@@ -48,17 +48,6 @@
             <div>05/07/20</div>
           </div>
 
-          <div class="img-container image7-container">
-          </div>
-
-          <div class="img-container image8-container">
-          </div>
-
-          <div class="img-container image9-container">
-          </div>
-
-          <div class="img-container image10-container">
-          </div>
         </div>
 
         <div class="btn-container">
@@ -111,16 +100,12 @@ section {
 .gallery1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
   gap: 10px;
 }
 
 .gallery1 * {
   border-radius: 25px;
-}
-
-.imge-container {
-
 }
 
 .image1-container {
@@ -129,12 +114,12 @@ section {
 
 .image1 {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .image2 {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .image4-container {
@@ -144,17 +129,17 @@ section {
 
 .image3 {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .image4 {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .image5 {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .image6-container {
@@ -166,7 +151,7 @@ section {
 
 .image6 {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .show-all-btn {
@@ -210,6 +195,7 @@ section {
 }
 
 .btn-container {
+  margin-top: 15px;
   text-align: center;
 }
 
