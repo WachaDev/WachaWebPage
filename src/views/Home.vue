@@ -2,6 +2,7 @@
   <div class="main-content">
     <Dashboard />
 
+
     <Section
       :styles="{
         boxShadowReverse: false,
@@ -18,6 +19,8 @@
           'https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y'
       }"
     />
+
+    <Gallery2/>
 
     <Section
       :styles="{
@@ -55,6 +58,7 @@
         ]
       }"
     />
+
   </div>
 </template>
 
@@ -62,21 +66,14 @@
 import Dashboard from "../components/sections/Dashboard";
 import Section from "../components/Section1";
 import Gallery from "../components/Gallery1";
+import Gallery2 from "../components/Gallery2";
 
 export default {
   components: {
     Dashboard,
     Section,
-    Gallery
+    Gallery,
+    Gallery2
   },
-
-  methods: {
-    topPage: function() {
-      scroll({
-        top: window.top,
-        behavior: "smooth"
-      });
-    }
-  }
 };
 </script>

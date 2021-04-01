@@ -35,6 +35,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -43,11 +44,10 @@ export default {
 }
 
 #app {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffff;
-  /* #E1E7E4 */
   /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23a3a0a2' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"); */
 }
 
@@ -56,9 +56,10 @@ a {
 }
 
 .section {
-  /* margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: auto; */
+  border-bottom: 2px solid #E1E7E4;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 8rem;
 }
 
 .image {

@@ -12,7 +12,7 @@
           <h1 class="title nice-border">{{ content.title }}</h1>
         </div>
         <div class="paragraph-container">
-          <p class="paragraph ">{{ content.paragraph }}</p>
+          <p class="paragraph">{{ content.paragraph }}</p>
         </div>
       </div>
       <div class="section-right-side" :class="{ toLeft: styles.sideReverse }">
@@ -48,24 +48,10 @@ export default {
 </script>
 
 <style scoped>
-.section {
-  /* padding: 1rem; */
-}
-
 .section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #ffff;
-  border-bottom: 1px solid black;
-  margin-left: 13rem;
-  margin-right: 13rem;
-  padding: 5rem;
-  /* padding-top: 2.5rem; */
-  /* padding-bottom: 2.5rem; */
-}
-
-.boxShadowRight {
-  /* box-shadow: 2.7rem 2.7rem #c71919; */
 }
 
 .toLeft {

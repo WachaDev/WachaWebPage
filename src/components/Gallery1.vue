@@ -1,6 +1,6 @@
 <template>
   <section
-    class="gallery-section"
+    class="gallery-section section"
     :class="{ boxShadowLeft: styles.boxShadowReverse }"
   >
     <div class="section-container">

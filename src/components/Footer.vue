@@ -1,10 +1,10 @@
 <template>
-  <div id="footer-container">
+  <div id="footer">
     <div id="top-footer">
       <div id="goto-btn-container">
-        <i id="goto-btn" v-on:click="gotoTop()" class="fas fa-sort-up"></i>
+        <i id="goto-btn" @click="gotoTop()" class="fas fa-sort-up"></i>
       </div>
-      <footer id="footer">
+      <footer id="footer-container">
         <!-- SOCIAL MEDIA: Github, Twitter, Instagram, etc... -->
         <h2 id="follow">Follow Me!</h2>
         <div class="social-icons-container">
@@ -23,10 +23,10 @@
             </a>
           </div>
         </div>
-        <div class="email-container">
-          <pre class="email">
-Personal e-mail: josemrr27@gmail.com    Business e-mail: wachamuli@businessman.com</pre
-          >
+        <div class="contactme">
+          <p>Personal e-mail: josemrr27@gmail.com</p>
+          <p>Business e-mail: wachamuli@businessman.com</p>
+          <p>Phone: 000-123-1234</p>
         </div>
       </footer>
     </div>
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style scoped>
-#footer-container {
+#footer {
   background: #c9050b;
 }
 
@@ -62,12 +62,6 @@ export default {
 #goto-btn {
   color: #ffff;
   cursor: pointer;
-}
-
-#footer {
-  padding-bottom: 3rem;
-  text-align: center;
-  /* display: flex; */
 }
 
 #top-footer {
@@ -97,24 +91,13 @@ export default {
   color: #ffff;
 }
 
+.contactme {
+  color: #ffff;
+  font-weight: bold;
+}
+
 #bottom-footer {
   background: #a51212;
-  font-size: 1rem;
-  padding: 2rem;
-  /* #c71919 */
-}
-
-.email-container {
-  text-align: center;
-}
-
-.email {
-  color: #ffff;
-  font-size: 1rem;
-  font-weight: bold;
-  position: relative;
-  right: 10px;
-  top: 40px;
-  bottom: 10px;
+  padding: 1.5rem;
 }
 </style>

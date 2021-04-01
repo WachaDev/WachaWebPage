@@ -1,8 +1,14 @@
 <template>
   <aside id="side-bar">
+    <div id="side-bar-icon">
+      <div class="side-bar-icon-container hvr-icon-grow">
+        <i @click="closeSideBar()" class="fas fa-times hvr-icon"></i>
+      </div>
+    </div>
+
     <div id="inner-side-bar">
       <div id="views">
-        <div class="delimeter">
+        <div id="views-delimiter" class="delimeter">
           <h4>Views</h4>
         </div>
         <div class="views-container">
@@ -11,7 +17,7 @@
             <button
               id="home-view"
               v-bind:class="{ 'current-view': isCurrentView }"
-              v-on:click="redirect('/')"
+              @click="redirect('/')"
             >
               Home
             </button>
@@ -21,7 +27,7 @@
             <button
               id="developer-view"
               v-bind:class="{ 'current-view': isCurrentView }"
-              v-on:click="redirect('/developer')"
+              @click="redirect('/developer')"
             >
               Developer
             </button>
@@ -31,7 +37,7 @@
             <button
               id="podcaster-view"
               v-bind:class="{ 'current-view': isCurrentView }"
-              v-on:click="redirect('/podcaster')"
+              @click="redirect('/podcaster')"
             >
               Podcaster
             </button>
@@ -41,7 +47,7 @@
             <button
               id="illustrator-view"
               v-bind:class="{ 'current-view': isCurrentView }"
-              v-on:click="redirect('/illustrator')"
+              @click="redirect('/illustrator')"
             >
               Illustrator
             </button>
@@ -56,31 +62,25 @@
         <div class="section-container">
           <div class="section-action-container side-bar-action">
             <i class="icon fas fa-award"></i>
-            <button
-              v-on:click="goto('most-loved-works')"
-            >
+            <button @click="goto('most-loved-works')">
               Experiencie
             </button>
           </div>
           <div class="section-action-container side-bar-action">
             <i class="icon fas fa-tasks"></i>
-            <button
-              v-on:click="goto('finished-projects')"
-            >
+            <button @click="goto('finished-projects')">
               Finished projects
             </button>
           </div>
           <div class="section-action-container side-bar-action">
             <i class="icon fas fa-hourglass-half"></i>
-            <button
-              v-on:click="goto('current-projects')"
-            >
+            <button @click="goto('current-projects')">
               Current projects
             </button>
           </div>
           <div class="section-action-container side-bar-action">
             <i class="icon fas fa-images"></i>
-            <button v-on:click="goto('gallery')">
+            <button @click="goto('gallery')">
               Gallery
             </button>
           </div>
@@ -97,8 +97,7 @@
 export default {
   data: function() {
     return {
-      isCurrentView: this.highlightCurrentView,
-      a: true
+      isCurrentView: this.highlightCurrentView
     };
   },
 
@@ -110,38 +109,55 @@ export default {
 
     openSideBar: function() {
       const sideBar = document.getElementById("side-bar");
-      const content = document.getElementById("main");
+      const app = document.getElementById("app");
 
       sideBar.style.width = "300px";
-      // Obscure the main content.
-      content.style.webkitFilter = "blur(5px)";
-      content.style.filter = "blur(5px)";
+      content.style.filter = "brightness(80%)";
     },
 
     closeSideBar: function() {
       const sideBar = document.getElementById("side-bar");
+
       sideBar.style.width = "0px";
+      content.style.filter = "brightness(100%)";
     },
 
     goto: function(elementId) {
       const element = document.getElementById(elementId);
       element.scrollIntoView({ behavior: "smooth" });
+    },
+
+    highlightCurrentView: function() {
+      const sideBarActions = document.getElementsByClassName("side-bar-action");
+      if (sideBarActions) {
+        for (let i = 0; i < sideBarActions.length; i++) {
+          // Get path contained in sideBarActions
+          let path = sideBarActions[i].getAttribute("href");
+          // Is that path the current one?
+          console.log("maria");
+          // if (path.includes(this.$route.fullPath)) {
+          //   console.log("Matched");
+          // }
+        }
+      }
     }
   },
 
   computed: {
-    highlightCurrentView: function() {
-      const sideBarActions = document.getElementsByClassName("side-bar-action");
-      for (let action of sideBarActions) {
-        // Get path contained in sideBarActions
-        let path = action.getAttribute("href");
-        // Is that path the current one?
-        if (path.includes(this.$route.fullPath)) {
-          console.log(`current route: ${this.currentRoute}, path: ${path}`); // TODO: Remove this.
-          return true;
-        }
+    opened: function() {
+      const sideBar = document.getElementById("side-bar");
+      let width = Number(sideBar.style.width);
+
+      if (width > 0) {
+        return true;
+      } else if (sideBar.style.width <= 0) {
+        return false;
       }
     }
+  },
+
+  created: function() {
+    this.highlightCurrentView();
   }
 };
 </script>
@@ -151,8 +167,8 @@ export default {
   /* font-size: 1.3rem; */
   color: rgb(116, 112, 112);
   position: fixed;
-  top: 3.9rem;
-  left: 0px;
+  /* top: 3.9rem; */
+  /* left: 0px; */
   height: 100%;
   width: 0px;
   background: #ffff;
@@ -161,6 +177,12 @@ export default {
   display: flex;
   flex-direction: column;
   transition: all 0.5s;
+}
+
+#side-bar-icon {
+  text-align: right;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 #inner-side-bar {
@@ -197,6 +219,10 @@ export default {
 .section-action-container {
   font-size: 1.1rem;
 } */
+
+.icon {
+  font-size: 1.5rem;
+}
 
 #home-view {
   display: inline;
