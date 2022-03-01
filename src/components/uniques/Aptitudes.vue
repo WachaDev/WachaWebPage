@@ -1,62 +1,69 @@
 <template>
- <div id="aptitudes" class="section">
-   <div id="aptitudes-container">
-     <div id="skilled">
-       <div class="aptitude-container">
-         <div class="icon-container">
-           <i class="fas fa-lightbulb"></i>
-         </div>
-         <div class="subtitle-container">
-           <h3 class="subtitle">Skilled</h3>
-         </div>
-         <div class="paragraph-container">
-           <p class="paragraph">
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-             Cumque optio sapiente earum aperiam voluptas sed quo sit?
-             Ex, expedita cupiditate.
-           </p>
-         </div>
-       </div>
-     </div>
+  <div id="aptitudes" class="section">
+    <h1 class="title"><span>Why me?</span></h1>
+    <div id="aptitudes-container">
+      <div id="skilled">
+        <div class="aptitude-container">
+          <div class="icon-container">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="subtitle-container">
+            <h3 class="subtitle">Skilled</h3>
+          </div>
+          <div class="paragraph-container">
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+              optio sapiente earum aperiam voluptas sed quo sit? Ex, expedita
+              cupiditate.
+            </p>
+          </div>
+        </div>
+      </div>
 
-     <div id="responsable">
-       <div class="aptitude-container">
-         <div class="icon-container">
-           <i class="fas fa-calendar-check"></i>
-         </div>
-         <div class="subtitle-container">
-           <h3 class="subtitle">Responsable</h3>
-         </div>
-         <div class="paragraph-container">
-           <p class="paragraph">
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-             earum laborum consequatur perspiciatis officiis tempore
-             atque a, eius.
-           </p>
-         </div>
-       </div>
-     </div>
+      <div id="responsable">
+        <div class="aptitude-container">
+          <div class="icon-container">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="subtitle-container">
+            <h3 class="subtitle">Responsable</h3>
+          </div>
+          <div class="paragraph-container">
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum earum
+              laborum consequatur perspiciatis officiis tempore atque a, eius.
+            </p>
+          </div>
+        </div>
+      </div>
 
-     <div id="passionate">
-       <div class="aptitude-container">
-         <div class="icon-container">
-           <i class="fas fa-fire"></i>
-         </div>
-         <div class="subtitle-container">
-           <h3 class="subtitle">Passionate</h3>
-         </div>
-         <div class="paragraph-container">
-           <p class="paragraph">
-             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-             Fugiat dolores nam ullam officiis maiores perferendis ab
-             repellat asperiores, incidunt a.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+      <div id="passionate">
+        <div class="aptitude-container">
+          <div class="icon-container">
+            <i class="fas fa-fire"></i>
+          </div>
+          <div class="subtitle-container">
+            <h3 class="subtitle">Passionate</h3>
+          </div>
+          <div class="paragraph-container">
+            <p class="paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+              dolores nam ullam officiis maiores perferendis ab repellat
+              asperiores, incidunt a.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<script>
+
+export default {
+}
+</script>
+
 
 <style scoped>
 #aptitudes-container {
@@ -106,4 +113,22 @@
 #aptitudes i {
   font-size: 1.5rem;
 }
+
+/* TODO: Undestand this pls */
+
+span {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+span::after{
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 1px; 
+    border-bottom: 1px solid #000; 
+    content: ""
+}
+
 </style>

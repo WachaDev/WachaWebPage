@@ -8,7 +8,8 @@
               WachaOut!
             </h1>
             <h4 id="dashboard-subtext">
-              What are you looking for? web pages, game development, nice draws, a good interview...
+              What are you looking for? web pages, game development, nice draws,
+              a good interview...
             </h4>
           </div>
           <div class="contact-for">
@@ -45,19 +46,21 @@
           </div>
         </div>
 
-          <div id="dashboard-right-side">
-            <div class="entire-logo">
-              <div class="logo">
-                <img id="logo-image" alt="" />
-              </div>
+        <div id="dashboard-right-side">
+          <div class="entire-logo">
+            <div class="logo">
+              <img id="logo-image" alt="" />
             </div>
           </div>
-
+        </div>
       </div>
     </div>
 
-    <div id="arrow-btn-container">
-      <i @click="goto('section')" class="arrow-btn fas fa-chevron-down"></i>
+    <div id="arrow-btn-container" class="">
+      <i
+        @click="goto('section')"
+        class="arrow-btn fas fa-chevron-down"
+      ></i>
     </div>
   </section>
 </template>
@@ -132,7 +135,7 @@ export default {
 
 #dashboard-title {
   font-family: "Fugaz One", cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   text-shadow: -6px 6px rgb(0, 0, 0, 0.7);
   color: #ffff;
   letter-spacing: 1px;

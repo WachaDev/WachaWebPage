@@ -30,6 +30,8 @@ export default {
 </script>
 <style>
 /* Font: Sniglet, Comfortaa  */
+/*  TODO: Take a look to Fira sans font. */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -44,7 +46,7 @@ export default {
 }
 
 #app {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffff;
@@ -71,9 +73,10 @@ a {
   font-family: "Fugaz One";
   color: #c9050b;
   font-size: 3rem;
-  text-align: center;
+  text-align: left;
   margin: 1rem;
-  text-shadow: -6px 6px rgba(0, 0, 0, 0.35);
+  /* border-bottom: 10px solid red; */
+  /* text-shadow: -6px 6px rgba(0, 0, 0, 0.35); */
 }
 
 .paragraph {

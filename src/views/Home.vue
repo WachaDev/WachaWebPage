@@ -68,7 +68,7 @@
 <script>
 import Dashboard from "../components/uniques/Dashboard";
 import Aptitudes from "../components/uniques/Aptitudes"
-import SocialMedia from "../components/uniques/SocialMedia.vue"
+import SocialMedia from "../components/SocialMedia.vue"
 import Section from "../components/Section1";
 import Gallery from "../components/Gallery1";
 import Gallery2 from "../components/Gallery2";
