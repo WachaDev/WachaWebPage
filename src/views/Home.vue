@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
-    <Dashboard />
-
+    <Dashboard/>
+    <Aptitudes/>
 
     <Section
       :styles="{
@@ -20,7 +20,10 @@
       }"
     />
 
-    <Gallery2/>
+
+    <SocialMedia/>
+
+    <!-- <Gallery2/>
 
     <Section
       :styles="{
@@ -57,13 +60,15 @@
           'https://picsum.photos/id/870/200/300?grayscale&blur=2'
         ]
       }"
-    />
+    /> -->
 
   </div>
 </template>
 
 <script>
-import Dashboard from "../components/sections/Dashboard";
+import Dashboard from "../components/uniques/Dashboard";
+import Aptitudes from "../components/uniques/Aptitudes"
+import SocialMedia from "../components/uniques/SocialMedia.vue"
 import Section from "../components/Section1";
 import Gallery from "../components/Gallery1";
 import Gallery2 from "../components/Gallery2";
@@ -71,6 +76,8 @@ import Gallery2 from "../components/Gallery2";
 export default {
   components: {
     Dashboard,
+    Aptitudes,
+    SocialMedia,
     Section,
     Gallery,
     Gallery2

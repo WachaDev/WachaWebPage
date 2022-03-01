@@ -6,8 +6,6 @@ import Developer from "@/views/Developer";
 import Illustrator from "@/views/Illustrator";
 import PageNotFound from "@/views/PageNotFound";
 
-import Gallery2 from "@/components/Gallery2"
-
 Vue.use(Router);
 
 export default new Router({
@@ -26,10 +24,6 @@ export default new Router({
       path: "/illustrator",
       name: "Illustrator",
       component: Illustrator
-    },
-    {
-      path: "/test",
-      component: Gallery2,
     },
     {
       path: "*",

@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <!-- <Header /> -->
-    <!-- <NavBar /> -->
-    <SideBarBtn />
-    <SideBar />
+    <!-- <Header/> -->
+    <!-- <NavBar/> -->
+    <!-- <SideBarBtn/> -->
+    <!-- <SideBar/> -->
     <main id="main">
       <router-view />
     </main>
-    <Footer />
+    <!-- <Footer /> --> -->
   </div>
 </template>
 
@@ -56,10 +56,10 @@ a {
 }
 
 .section {
-  border-bottom: 2px solid #E1E7E4;
+  border-top: 2px solid #E1E7E4;
   margin-left: 10rem;
   margin-right: 10rem;
-  padding: 8rem;
+  padding: 4rem;
 }
 
 .image {

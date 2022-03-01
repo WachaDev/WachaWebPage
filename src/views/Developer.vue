@@ -21,12 +21,10 @@
 
 <script>
 import Section from "../components/Section1";
-import Dashboard from "../components/sections/Dashboard";
 
 export default {
   components: {
     Section,
-    Dashboard
   }
 };
 </script>

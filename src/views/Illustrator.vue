@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import QuickAbout from "../components/sections/QuickAbout";
+import QuickAbout from "../components/QuickAbout";
 
 export default {
   components: {
