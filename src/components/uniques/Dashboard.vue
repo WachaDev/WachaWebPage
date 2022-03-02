@@ -14,33 +14,33 @@
           </div>
           <div class="contact-for">
             <button
-              class="developer-btn hvr-fade  hvr-icon-wobble-horizontal"
+              class="developer-btn hvr-fade  hvr-icon-up"
               @click="redirect('/developer')"
             >
               Developer
               <i
                 id="developer-btn-icon"
-                class="fas fa-arrow-circle-right hvr-icon"
+                class="fas fa-code hvr-icon"
               ></i>
             </button>
             <button
-              class="podcaster-btn  hvr-fade hvr-icon-wobble-horizontal"
+              class="podcaster-btn  hvr-fade hvr-icon-up"
               @click="redirect('/podcaster')"
             >
               Podcaster
               <i
                 id="podcaster-btn-icon"
-                class="fas fa-arrow-circle-right hvr-icon"
+                class="fas fa-microphone hvr-icon"
               ></i>
             </button>
             <button
-              class="illustrator-btn hvr-fade hvr-icon-wobble-horizontal"
+              class="illustrator-btn hvr-fade hvr-icon-up"
               @click="redirect('/illustrator')"
             >
               Illustrator
               <i
                 id="illustrator-btn-icon"
-                class="fas fa-arrow-circle-right hvr-icon"
+                class="fas fa-palette hvr-icon"
               ></i>
             </button>
           </div>
@@ -91,7 +91,9 @@ export default {
 
 <style scoped>
 #dashboard-container {
-  background: #c9050b;
+  background: #F90716;
+  /* #c9050b */
+  /* background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.24' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
   border-width: 10px;
   padding-bottom: 3%;
   /* margin-bottom: 3%; */
@@ -142,14 +144,16 @@ export default {
 }
 
 #dashboard-title-container {
-  margin: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   border-bottom: 9px double #ffff;
 }
 
 #dashboard-subtext {
   color: #ffff;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .contact-for {
@@ -160,26 +164,21 @@ export default {
 
 .contact-for button {
   cursor: pointer;
-  background: #a51212;
-  color: white;
+  background: white;
+  color: #c9050b;
   padding: 0.5rem;
-  /* width: 16rem; */
-  /* margin-bottom: 1rem; */
-  border-color: white;
-  border-width: 7px;
+  border: none;
   border-radius: 100px;
-  border-style: solid;
   width: 30%;
-  font-size: 17px;
+  font-size: 1.2rem;
+  box-shadow: -6px 6px rgba(0, 0, 0, 10);
 }
 
 .contact-for button:hover,
 .contact-for button:focus,
 .contact-for button:active {
-  background: #ffff;
-  border-color: #a51212;
-  /* border-style: double; */
-  color: #ea2027;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 241, 42);
 }
 
 .developer-btn {

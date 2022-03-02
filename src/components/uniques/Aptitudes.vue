@@ -1,11 +1,11 @@
 <template>
   <div id="aptitudes" class="section">
-    <h1 class="title"><span>Why me?</span></h1>
+    <Title :text="'Why me?'"/>
     <div id="aptitudes-container">
       <div id="skilled">
         <div class="aptitude-container">
-          <div class="icon-container">
-            <i class="fas fa-lightbulb"></i>
+          <div class="icon-container fa-5x">
+            <font-awesome-icon icon="fa-regular fa-lightbulb" />
           </div>
           <div class="subtitle-container">
             <h3 class="subtitle">Skilled</h3>
@@ -22,8 +22,8 @@
 
       <div id="responsable">
         <div class="aptitude-container">
-          <div class="icon-container">
-            <i class="fas fa-calendar-check"></i>
+          <div class="icon-container fa-5x">
+            <font-awesome-icon icon="fa-regular fa-calendar-check" />
           </div>
           <div class="subtitle-container">
             <h3 class="subtitle">Responsable</h3>
@@ -39,8 +39,8 @@
 
       <div id="passionate">
         <div class="aptitude-container">
-          <div class="icon-container">
-            <i class="fas fa-fire"></i>
+          <div class="icon-container fa-5x">
+            <font-awesome-icon icon="fa-solid fa-fire" />
           </div>
           <div class="subtitle-container">
             <h3 class="subtitle">Passionate</h3>
@@ -59,8 +59,12 @@
 </template>
 
 <script>
+import Title from "../Title"
 
 export default {
+  components: {
+    Title
+  }
 }
 </script>
 
@@ -72,24 +76,11 @@ export default {
   gap: 29px;
   text-align: center;
   margin-top: 5%;
-  margin-left: 5%;
-  margin-left: 5%;
   margin-bottom: 5%;
-  color: #fff;
-  font-weight: bold;
 }
 
 .aptitude-container {
-  background: #a51212;
   padding: 0.5rem;
-  border: 5px solid #ffff;
-  box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
-}
-
-.aptitude-container:hover {
-  background: #ffff;
-  color: #a51212;
-  border-color: #a51212;
 }
 
 .subtitle-container {
@@ -97,38 +88,18 @@ export default {
 }
 
 .subtitle {
-  font-size: 1.5rem;
   font-family: "Fugaz One";
-}
-
-.paragraph-container {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .icon-container {
   margin-bottom: 0.5rem;
+  color: #c9050b;
 }
 
 #aptitudes i {
   font-size: 1.5rem;
-}
-
-/* TODO: Undestand this pls */
-
-span {
-    position: relative;
-    padding-bottom: 5px;
-}
-
-span::after{
-    position: absolute; 
-    left: 0; 
-    bottom: 0; 
-    width: 100%; 
-    height: 1px; 
-    border-bottom: 1px solid #000; 
-    content: ""
 }
 
 </style>

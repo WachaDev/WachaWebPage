@@ -1,6 +1,7 @@
 <template>
   <div class="main-content">
     <Dashboard/>
+
     <Aptitudes/>
 
     <Section
@@ -68,7 +69,8 @@
 <script>
 import Dashboard from "../components/uniques/Dashboard";
 import Aptitudes from "../components/uniques/Aptitudes"
-import SocialMedia from "../components/SocialMedia.vue"
+import SocialMedia from "../components/SocialMedia";
+import Title from "../components/Title";
 import Section from "../components/Section1";
 import Gallery from "../components/Gallery1";
 import Gallery2 from "../components/Gallery2";
@@ -78,6 +80,7 @@ export default {
     Dashboard,
     Aptitudes,
     SocialMedia,
+    Title,
     Section,
     Gallery,
     Gallery2

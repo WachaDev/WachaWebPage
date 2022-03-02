@@ -35,7 +35,8 @@ export default {
 
 <style scoped>
 #footer {
-  background: #c9050b;
+  background: rgb(255, 241, 42);
+  /* #c9050b */
 }
 
 #goto-btn-container {
@@ -52,7 +53,6 @@ export default {
   text-align: center;
   padding: 1rem;
 }
-
 
 .contactme {
   color: #ffff;

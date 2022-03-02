@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <!-- <Header/> -->
-    <!-- <NavBar/> -->
+    <NavBar/>
     <!-- <SideBarBtn/> -->
     <!-- <SideBar/> -->
     <main id="main">
       <router-view />
     </main>
-    <!-- <Footer /> --> -->
+    <!-- <Footer /> -->
   </div>
 </template>
 
@@ -17,7 +16,6 @@ import NavBar from "./components/NavBar";
 import SideBarBtn from "./components/SideBarBtn";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
-
 export default {
   components: {
     Header,
@@ -31,7 +29,7 @@ export default {
 <style>
 /* Font: Sniglet, Comfortaa  */
 /*  TODO: Take a look to Fira sans font. */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -47,10 +45,12 @@ export default {
 
 #app {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: 	#7e7c7c;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffff;
-  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23a3a0a2' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"); */
+  /* background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.24' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
 }
 
 a {
@@ -70,9 +70,11 @@ a {
 }
 
 .title {
-  font-family: "Fugaz One";
-  color: #c9050b;
-  font-size: 3rem;
+  font-family: "Fira Sans", "Fugaz One";
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: black;
   text-align: left;
   margin: 1rem;
   /* border-bottom: 10px solid red; */
