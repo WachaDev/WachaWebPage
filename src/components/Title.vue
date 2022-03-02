@@ -19,7 +19,6 @@ export default {
 <style scoped>
 /* TODO: Undestand this pls */
  
-
 span {
   position: relative;
   padding-bottom: 9px;
