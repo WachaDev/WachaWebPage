@@ -4,18 +4,33 @@
       <div id="goto-btn-container">
         <i id="goto-btn" @click="gotoTop()" class="fas fa-sort-up"></i>
       </div>
-      <footer id="footer-container">
-        <!-- SOCIAL MEDIA: Github, Twitter, Instagram, etc... -->
-        <h2 id="follow">Follow Me!</h2>
-        <div class="contactme">
-          <p>Personal e-mail: josemrr27@gmail.com</p>
-          <p>Business e-mail: wachamuli@businessman.com</p>
-          <p>Phone: 000-123-1234</p>
+      <div class="logo">
+        <div>LOGO</div>
+      </div>
+        <div class="summary-container">
+          <p class="summary">
+            <!-- A quick description of what this site is, e.x: this a portafolio about... -->
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            quam eveniet voluptatem sunt, voluptatibus eos nihil iure obcaecati
+            asperiores cupiditate sequi tempora adipisci, quasi distinctio
+            incidunt! Recusandae blanditiis quasi sequi officiis ratione, optio
+            ea! Sed accusantium tempora in officiis nam.
+          </p>
         </div>
-      </footer>
-    </div>
-    <div id="bottom-footer">
-      <i class="far fa-copyright"></i> copyright privacy
+        <div class="social-container">
+          <ul>
+            <li><i id="youtube-icon" class="fab fa-youtube social-icon"></i></li>
+            <li><i id="github-icon" class="fab fa-github social-icon"></i></li>
+            <li><i id="twitter-icon" class="fab fa-twitter social-icon"></i></li>
+            <li><i id="instagram-icon" class="fab fa-instagram social-icon"></i></li>
+          </ul>
+        </div>
+
+      <div>
+        <!-- Temporal -->
+        <h5>Hosted on Heroku</h5>
+        <h5>Legal · Privacy · Cookies</h5>
+      </div>
     </div>
   </footer>
 </template>
@@ -35,8 +50,7 @@ export default {
 
 <style scoped>
 #footer {
-  background: rgb(255, 241, 42);
-  /* #c9050b */
+  background: black;
 }
 
 #goto-btn-container {
@@ -54,9 +68,29 @@ export default {
   padding: 1rem;
 }
 
-.contactme {
-  color: #ffff;
-  font-weight: bold;
+.summary-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 15rem;
+  margin-left: 15rem;
+}
+
+.summary {
+  text-align: center;
+}
+
+.social-container {
+  margin: 1rem;
+}
+
+.social-container li {
+  display: inline;
+  list-style: none;
+  margin: 0.5rem;
+}
+
+.social-container li i {
+  font-size: 2rem;
 }
 
 #bottom-footer {

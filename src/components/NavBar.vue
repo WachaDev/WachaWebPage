@@ -7,16 +7,23 @@
     </ul>
 
     <ul id="routes-container">
+      <div class="route-container">
+        <li>
+          <router-link class="route" to="/">HOME</router-link>
+        </li>
+      </div>
       <li>
-        <router-link class="route" to="/">HOME</router-link>
+        <div class="route-container">
+          <router-link class="route" to="/puto"
+            >SERVICES
+            <font-awesome-icon icon="fa-solid fa-angle-down" />
+          </router-link>
+        </div>
       </li>
       <li>
-        <router-link class="route" to="/puto">JOB
-        <font-awesome-icon icon="fa-solid fa-angle-down"/>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="route" to="/tito">CONTACT</router-link>
+        <div class="route-container">
+          <router-link class="route" to="/tito">CONTACT</router-link>
+        </div>
       </li>
       <li>
         <router-link class="route" to="/ju">SUPPORT</router-link>
@@ -59,10 +66,14 @@ li {
   padding: 1rem;
 }
 
+.route-container {
+  border-right: 2px solid white;
+}
+
 .route {
   color: #ffff;
   padding: 0.5rem;
-  margin-right: 15px;
+  margin: 8px;
 }
 
 .router-link-exact-active {

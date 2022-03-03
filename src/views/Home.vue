@@ -21,9 +21,6 @@
       }"
     />
 
-
-    <SocialMedia/>
-
     <!-- <Gallery2/>
 
     <Section
@@ -69,7 +66,6 @@
 <script>
 import Dashboard from "../components/uniques/Dashboard";
 import Aptitudes from "../components/uniques/Aptitudes"
-import SocialMedia from "../components/SocialMedia";
 import Title from "../components/Title";
 import Section from "../components/Section1";
 import Gallery from "../components/Gallery1";
@@ -79,7 +75,6 @@ export default {
   components: {
     Dashboard,
     Aptitudes,
-    SocialMedia,
     Title,
     Section,
     Gallery,
