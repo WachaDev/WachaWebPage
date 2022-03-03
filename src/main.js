@@ -5,12 +5,12 @@ import App from "./App";
 import router from "./router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFire, faCannabis } from "@fortawesome/free-solid-svg-icons"
+import { faFire, faCannabis, faAngleDown } from "@fortawesome/free-solid-svg-icons"
 import { faLightbulb, faCalendarCheck } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-library.add(faLightbulb, faCalendarCheck, faFire, faCannabis);
+library.add(faLightbulb, faCalendarCheck, faFire, faCannabis, faAngleDown);
 
 Vue.config.productionTip = false;
 

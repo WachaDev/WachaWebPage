@@ -1,34 +1,29 @@
 <template>
   <nav id="navbar">
     <ul id="logo-container">
-      <li>
-        <router-link class="route" to="/">
-          <font-awesome-icon icon="fa fa-cannabis"/>
-        </router-link>
+      <li class="logo">
+        LOGO
       </li>
     </ul>
 
     <ul id="routes-container">
-      <li id="alo">
+      <li>
         <router-link class="route" to="/">HOME</router-link>
-      <li>
-        <router-link class="route" to="/">JOB</router-link>
       </li>
       <li>
-        <router-link class="route" to="/">CONTACT</router-link>
+        <router-link class="route" to="/puto">JOB
+        <font-awesome-icon icon="fa-solid fa-angle-down"/>
+        </router-link>
       </li>
       <li>
-        <router-link class="route" to="/">SUPPORT</router-link>
+        <router-link class="route" to="/tito">CONTACT</router-link>
+      </li>
+      <li>
+        <router-link class="route" to="/ju">SUPPORT</router-link>
       </li>
     </ul>
   </nav>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style scoped>
 #navbar {
@@ -37,10 +32,16 @@ export default {
   display: flex;
   justify-content: flex-end;
   padding-left: 1rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
   padding-right: 1rem;
   font-weight: 700;
-  background:#F90716;
+  background: #f90716;
   z-index: 99;
+}
+
+.logo {
+  color: #ffff;
 }
 
 li {
@@ -60,11 +61,14 @@ li {
 
 .route {
   color: #ffff;
-  margin-left: 1rem;
+  padding: 0.5rem;
+  margin-right: 15px;
 }
 
-.current-route {
-  color: rgb(255, 241, 42);
+.router-link-exact-active {
+  color: black;
+  background: rgb(255, 241, 42);
+  border-radius: 25px;
+  box-shadow: -4px 4px black;
 }
-
 </style>
