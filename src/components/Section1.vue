@@ -6,10 +6,10 @@
       box: styles.altBackground
     }"
   >
+  <Title text="Who am I?"/>
     <div class="section-container">
       <div class="section-left-side" :class="{ toRight: styles.sideReverse }">
         <div class="title-container">
-          <h1 class="title nice-border">{{ content.title }}</h1>
         </div>
         <div class="paragraph-container">
           <p class="paragraph">{{ content.paragraph }}</p>
@@ -23,7 +23,11 @@
 </template>
 
 <script>
+import Title from "../components/Title";
 export default {
+  components: {
+    Title
+  },
   props: {
     styles: {
       boxShadowReverse: Boolean,
@@ -48,10 +52,12 @@ export default {
 </script>
 
 <style scoped>
+.section {
+  /* background: #f3f3f3; */
+}
 .section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #ffff;
 }
 
 .toLeft {

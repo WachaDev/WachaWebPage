@@ -1,9 +1,8 @@
 <template>
   <div class="main-content">
-    <Dashboard/>
+    <Dashboard />
 
-    <Aptitudes/>
-
+    <Aptitudes />
     <Section
       :styles="{
         boxShadowReverse: false,
@@ -15,7 +14,15 @@
           Culpa nam quam, dolorem pariatur placeat corrupti inventore
           maiores. Voluptate alias hic mollitia incidunt adipisci,
           consectet quasi. Aut assumenda consectetur vero dicta fugit
-          placeat exercitationem ea necessitatibus, odio`,
+          placeat exercitationem ea necessitatibus, odio
+
+           
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam cupiditate
+          aut similique, officia ab labore? Sit, reprehenderit. Commodi odio illo
+          accusantium officiis est tenetur soluta dicta error, aperiam sequi
+          repudiandae iste aliquam natus illum iusto sit nobis cupiditate dolorem
+          laborum dolores incidunt, voluptatem totam officias
+          `,
         picture:
           'https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y'
       }"
@@ -59,13 +66,12 @@
         ]
       }"
     /> -->
-
   </div>
 </template>
 
 <script>
 import Dashboard from "../components/uniques/Dashboard";
-import Aptitudes from "../components/uniques/Aptitudes"
+import Aptitudes from "../components/uniques/Aptitudes";
 import Title from "../components/Title";
 import Section from "../components/Section1";
 import Gallery from "../components/Gallery1";
@@ -79,6 +85,6 @@ export default {
     Section,
     Gallery,
     Gallery2
-  },
+  }
 };
 </script>

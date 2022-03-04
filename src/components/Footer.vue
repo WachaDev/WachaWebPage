@@ -28,7 +28,7 @@
 
       <div>
         <!-- Temporal -->
-        <h5>Hosted on Heroku</h5>
+        <h5 class="host">Hosted on Heroku</h5>
         <h5>Legal · Privacy · Cookies</h5>
       </div>
     </div>
@@ -50,7 +50,11 @@ export default {
 
 <style scoped>
 #footer {
-  background: black;
+  position: absolute;
+  bottom: 0;
+  background:#212121;
+  height: auto;
+  width: 100%;
 }
 
 #goto-btn-container {
@@ -68,6 +72,10 @@ export default {
   padding: 1rem;
 }
 
+.logo {
+  color: rgb(236, 236, 236);
+}
+
 .summary-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -83,14 +91,24 @@ export default {
   margin: 1rem;
 }
 
+.social-container li i:hover {
+  color: #ffff;
+}
+
 .social-container li {
   display: inline;
   list-style: none;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 .social-container li i {
   font-size: 2rem;
+  color: rgb(236, 236, 236);
+}
+
+.host {
+  color: rgb(236, 236, 236);
 }
 
 #bottom-footer {

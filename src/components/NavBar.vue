@@ -76,6 +76,11 @@ li {
   margin: 8px;
 }
 
+.route:hover:not(.router-link-exact-active) {
+  color: rgb(221, 219, 219);
+}
+
+
 .router-link-exact-active {
   color: black;
   background: rgb(255, 241, 42);
