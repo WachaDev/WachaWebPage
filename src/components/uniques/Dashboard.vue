@@ -56,35 +56,21 @@
       </div>
     </div>
 
-    <div id="arrow-btn-container" class="">
+    <!-- <div id="arrow-btn-container" class="">
       <i
         @click="goto('section')"
         class="arrow-btn fas fa-chevron-down"
       ></i>
-    </div>
+    </div> -->
   </section>
 </template>
 
 <script>
 export default {
   methods: {
-    openSideBar: function() {
-      const sideBar = document.getElementById("side-bar");
-      sideBar.style.width = "300px";
-    },
-    closeSideBar: function() {
-      const sideBar = document.getElementById("side-bar");
-      sideBar.style.width = "0px";
-    },
     redirect: function(path) {
       this.$router.push({ path });
     },
-    goto: function(element) {
-      const sections = document.getElementsByClassName(element);
-      sections[0].scrollIntoView({
-        behavior: "smooth",
-      });
-    }
   }
 };
 </script>
@@ -92,17 +78,15 @@ export default {
 <style scoped>
 #dashboard-container {
   background: #F90716;
-  /* background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.24' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
   border-width: 10px;
-  padding-bottom: 3%;
-  /* margin-bottom: 3%; */
+  padding-bottom: 2rem;
+  padding-top: 2rem;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 .dashboard-top-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 2rem;
   margin-left: 10rem;
   margin-right: 10rem;
   margin-right: 15rem;
@@ -115,8 +99,6 @@ export default {
 
 .logo {
   background: #ffff;
-  /* margin-right: 16.5rem; */
-  /* margin-left: 13rem; */
 }
 
 .logo,
@@ -191,14 +173,6 @@ export default {
 .illustrator-btn {
   font-family: "Lobster", cursive;
 }
-/*
-#podcaster-btn-icon {
-  font-size: 1.5rem;
-}
-
-#illustrator-btn-icon {
-  font-size: 1.5rem;
-} */
 
 #arrow-btn-container {
   text-align: center;

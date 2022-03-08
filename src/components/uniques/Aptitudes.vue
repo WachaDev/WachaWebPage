@@ -1,5 +1,5 @@
 <template>
-  <div id="aptitudes" class="section">
+  <section id="aptitudes" class="section">
     <Title :text="'Why me?'"/>
     <div id="aptitudes-container">
       <div id="skilled">
@@ -55,7 +55,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -76,11 +76,12 @@ export default {
   gap: 29px;
   text-align: center;
   margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .aptitude-container {
-  padding: 0.5rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .subtitle-container {
@@ -88,7 +89,7 @@ export default {
 }
 
 .subtitle {
-  font-family: "Fugaz One";
+  font-family: "Fira Sans";
   font-size: 1.5rem;
   color: black;
 }

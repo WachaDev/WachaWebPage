@@ -19,6 +19,17 @@ export default {
 <style scoped>
 /* TODO: Undestand this pls */
  
+.title {
+  font-family: "Fugaz One";
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  /* border-bottom: 10px solid red; */
+  /* text-shadow: -6px 6px rgba(0, 0, 0, 0.35); */
+}
+
 span {
   position: relative;
   padding-bottom: 9px;

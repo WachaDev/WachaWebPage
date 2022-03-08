@@ -13,24 +13,58 @@
         </li>
       </div>
       <li>
-        <div class="route-container">
-          <router-link class="route" to="/puto"
+        <div
+          @mouseover="toggleServiceMenu(true)"
+          @mouseleave="toggleServiceMenu(false)"
+          class="route-container"
+        >
+          <a class="route" to="#"
             >SERVICES
             <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </router-link>
+          </a>
+          <div id="service-menu">
+            <div class="services-container">
+              <li class="view">Developer<i class="fas fa-code"></i></li>
+              <li class="view">Podcaster<i class="fas fa-microphone"></i></li>
+              <li class="view">Illustrator<i class="fas fa-palette"></i></li>
+            </div>
+          </div>
         </div>
       </li>
       <li>
         <div class="route-container">
-          <router-link class="route" to="/tito">CONTACT</router-link>
+          <router-link class="route " to="/contact">CONTACT</router-link>
         </div>
       </li>
       <li>
-        <router-link class="route" to="/ju">SUPPORT</router-link>
+        <router-link class="route" to="/support">SUPPORT</router-link>
       </li>
     </ul>
   </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleServiceMenu: function(open) {
+      const menu = document.getElementById("service-menu");
+      let menuHeight = getComputedStyle(menu).height;
+
+      if (open && menuHeight <= "0px") {
+        menu.style.height = "5.5rem";
+        menu.style.border = "2px solid #ffff";
+        return;
+      }
+
+      if (!open && menuHeight > "0px") {
+        menu.style.height = "0px";
+        menu.style.border = "none";
+        return;
+      }
+    }
+  }
+};
+</script>
 
 <style scoped>
 #navbar {
@@ -49,10 +83,6 @@
 
 .logo {
   color: #ffff;
-}
-
-li {
-  list-style: none;
 }
 
 #logo-container {
@@ -76,15 +106,45 @@ li {
   margin: 8px;
 }
 
-.route:hover:not(.router-link-exact-active) {
+.route:hover:not(.router-link-exact-active),
+.route:focus:not(.router-link-exact-active),
+.route:active:not(.router-link-exact-active) {
   color: rgb(221, 219, 219);
 }
-
 
 .router-link-exact-active {
   color: black;
   background: rgb(255, 241, 42);
   border-radius: 25px;
   box-shadow: -4px 4px black;
+}
+
+#service-menu {
+  position: absolute;
+  overflow: hidden;
+  background: #f90716;
+  height: 0;
+  top: 3.1rem;
+  right: 14.9rem;
+  transition: all 0.5s;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.services-container .view {
+  color: #fff;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.view:hover {
+  color: rgb(255, 241, 42);
+  text-shadow: -2px 2px rgb(0, 0, 0, 0.7);
+}
+
+i {
+  margin-left: 5px; 
 }
 </style>

@@ -45,18 +45,23 @@ export default {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: 500;
   color: #7e7c7c;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #ffff;
   position: relative;
   min-height: 100vh;
+  font-size: 1.1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#main {
+  padding-bottom: 16.6rem; 
+  font-size: 1.1rem;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: rgba(255, 0, 0, 0);
 }
@@ -73,36 +78,21 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .section {
-  border-top: 2px solid #e1e7e4;
-  margin-left: 12rem;
-  margin-right: 12rem;
-  padding: 2rem;
+  background: #ffff;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .image {
   width: 400px;
   height: 300px;
-}
-
-.title {
-  font-family: "Fira Sans", "Fugaz One";
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: black;
-  text-align: left;
-  margin: 1rem;
-  /* border-bottom: 10px solid red; */
-  /* text-shadow: -6px 6px rgba(0, 0, 0, 0.35); */
-}
-
-.paragraph {
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-#main {
-  padding-bottom: 15rem; 
 }
 </style>

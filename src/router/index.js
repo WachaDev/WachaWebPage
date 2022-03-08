@@ -4,6 +4,7 @@ import Router from "vue-router";
 import Home from "@/views/Home";
 import Developer from "@/views/Developer";
 import Illustrator from "@/views/Illustrator";
+import Podcaster from "@/views/Podcaster";
 import PageNotFound from "@/views/PageNotFound";
 
 Vue.use(Router);
@@ -19,6 +20,11 @@ export default new Router({
       path: "/developer",
       name: "Developer",
       component: Developer
+    },
+    {
+      path: "/podcaster",
+      name: "Podcaster",
+      component: Podcaster
     },
     {
       path: "/illustrator",

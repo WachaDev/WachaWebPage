@@ -97,7 +97,6 @@ export default {
 
 .social-container li {
   display: inline;
-  list-style: none;
   margin: 0.5rem;
   cursor: pointer;
 }
