@@ -1,7 +1,6 @@
 <template>
   <div class="main-content">
     <Dashboard />
-
     <Aptitudes />
     <Section
       :content="{
@@ -14,8 +13,7 @@
           'https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y'
       }"
     />
-
-    <StartIdea/>
+    <HomeGallery/>
     <!-- <Gallery2/>
 
     <Section
@@ -60,17 +58,16 @@
 <script>
 import Dashboard from "../components/uniques/Dashboard";
 import Aptitudes from "../components/uniques/Aptitudes";
-import StartIdea from "../components/uniques/StartIdea";
 import Section from "../components/Section1";
-import Title from "../components/Title";
+import HomeGallery from "../components/uniques/HomeGallery";
+
 
 export default {
   components: {
     Dashboard,
     Aptitudes,
-    StartIdea,
+    HomeGallery,
     Section,
-    Title,
   }
 };
 </script>

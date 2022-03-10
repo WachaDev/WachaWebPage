@@ -76,12 +76,16 @@ export default {
 </script>
 
 <style scoped>
+#dashboard {
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px; */
+}
+
 #dashboard-container {
   background: #F90716;
   border-width: 10px;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 .dashboard-top-container {

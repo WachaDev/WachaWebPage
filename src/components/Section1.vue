@@ -60,14 +60,6 @@ export default {
   gap: 15px;
 }
 
-.title {
-  font-family: "Fugaz One";
-  color: #ea2027;
-  font-size: 3rem;
-  text-align: center;
-  margin: 1rem;
-}
-
 .subtitle {
   font-family: "Fira Sans";
   margin-top: 1rem;

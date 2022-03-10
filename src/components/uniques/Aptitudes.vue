@@ -4,7 +4,7 @@
     <div id="aptitudes-container">
       <div id="skilled">
         <div class="aptitude-container">
-          <div class="icon-container fa-5x">
+          <div class="icon-container fa-4x">
             <font-awesome-icon icon="fa-regular fa-lightbulb" />
           </div>
           <div class="subtitle-container">
@@ -22,7 +22,7 @@
 
       <div id="responsable">
         <div class="aptitude-container">
-          <div class="icon-container fa-5x">
+          <div class="icon-container fa-4x">
             <font-awesome-icon icon="fa-regular fa-calendar-check" />
           </div>
           <div class="subtitle-container">
@@ -39,7 +39,7 @@
 
       <div id="passionate">
         <div class="aptitude-container">
-          <div class="icon-container fa-5x">
+          <div class="icon-container fa-4x">
             <font-awesome-icon icon="fa-solid fa-fire" />
           </div>
           <div class="subtitle-container">
@@ -98,9 +98,4 @@ export default {
   margin-bottom: 0.5rem;
   color: #c9050b;
 }
-
-#aptitudes i {
-  font-size: 1.5rem;
-}
-
 </style>

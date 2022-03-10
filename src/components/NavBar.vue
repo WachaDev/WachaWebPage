@@ -128,7 +128,6 @@ export default {
   right: 14.9rem;
   transition: all 0.5s;
   border-radius: 10px;
-  border: 2px solid white;
 }
 
 .services-container .view {
