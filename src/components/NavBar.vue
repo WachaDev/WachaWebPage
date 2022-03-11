@@ -22,7 +22,7 @@
             >SERVICES
             <font-awesome-icon icon="fa-solid fa-angle-down" />
           </a>
-          <div id="service-menu">
+          <div id="service-menu" ref="servicesMenu">
             <div class="services-container">
               <li class="view">Developer<i class="fas fa-code"></i></li>
               <li class="view">Podcaster<i class="fas fa-microphone"></i></li>
@@ -47,8 +47,8 @@
 export default {
   methods: {
     toggleServiceMenu: function(open) {
-      const menu = document.getElementById("service-menu");
-      let menuHeight = getComputedStyle(menu).height;
+      let menu = this.$refs.servicesMenu;
+      let menuHeight = menu.style.height;
 
       if (open && menuHeight <= "0px") {
         menu.style.height = "5.5rem";

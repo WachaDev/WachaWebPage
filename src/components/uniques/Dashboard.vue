@@ -8,7 +8,7 @@
               WachaOut!
             </h1>
             <h4 id="dashboard-subtext">
-              What are you looking for? web pages, game development, nice draws,
+              What are you looking for? web pages, game development, nice drawings,
               a good interview...
             </h4>
           </div>
@@ -55,13 +55,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div id="arrow-btn-container" class="">
-      <i
-        @click="goto('section')"
-        class="arrow-btn fas fa-chevron-down"
-      ></i>
-    </div> -->
   </section>
 </template>
 
@@ -78,7 +71,6 @@ export default {
 <style scoped>
 #dashboard {
   position: relative;
-  /* box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px; */
 }
 
 #dashboard-container {

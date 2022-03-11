@@ -6,16 +6,16 @@
         <Title text="Who am I?" />
         <div class="subtitle-container">
           <h1 class="subtitle">
-            A very dedicated person who offers his services Lorem ipsum dolor sit amet.
+            {{ subtitle }}
           </h1>
         </div>
         <div class="title-container"></div>
         <div class="paragraph-container">
-          <p class="paragraph">{{ content.paragraph }}</p>
+          <p class="paragraph">{{ paragraph }}</p>
         </div>
       </div>
       <div class="section-right-side">
-        <img class="image" :src="content.picture" alt="" />
+        <img class="image" :src="picture" alt="" />
       </div>
     </div>
   </section>
@@ -28,23 +28,21 @@ export default {
     Title
   },
   props: {
-    styles: {
-      boxShadowReverse: Boolean,
-      sideReverse: Boolean
+    title: {
+      type: String,
+      required: true
     },
-    content: {
-      title: {
-        type: String,
-        required: true
-      },
-      paragraph: {
-        type: String,
-        required: true
-      },
-      picture: {
-        type: String,
-        required: true
-      }
+    subtitle: {
+      type: String,
+      required: true
+    },
+    paragraph: {
+      type: String,
+      required: true
+    },
+    picture: {
+      type: String,
+      required: true
     }
   }
 };
@@ -65,7 +63,6 @@ export default {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
 
 .section-right-side {
   display: flex;

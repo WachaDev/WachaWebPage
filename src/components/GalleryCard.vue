@@ -1,9 +1,9 @@
 <template>
-  <router-link :style="cssProps" :to="route" class="hvr-icon-forward">
-    <div id="card">
+  <router-link  :to="route" class="hvr-icon-forward">
+    <div id="card" :style="{ 'background-image': imageURL }">
       <div class="card-container">
         <div class="content">
-          <h1 class="title">{{ title }}</h1>
+          <h1 class="title" :style="{ 'font-family': fontFamily }">{{ title }}</h1>
           <p>{{ description }}</p>
           <div class="see-more ">
             See more
@@ -42,20 +42,11 @@ export default {
     },
     font: String
   },
-  computed: {
-    cssProps: function() {
-      return {
-        '--background-image': this.imageURL,
-        '--font-family': this.fontFamily
-      }
-    }
-  }
 };
 </script>
 
 <style scoped>
 #card {
-  background-image: var(--background-image) ;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 14rem;
@@ -74,7 +65,6 @@ export default {
 }
 
 .title {
-  font-family: var(--font-family);
   font-size: 26.4px;
   margin-bottom: 4px;
   border-bottom: 2px solid white;

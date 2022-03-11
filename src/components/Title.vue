@@ -26,8 +26,6 @@ export default {
   font-weight: bold;
   color: black;
   text-align: left;
-  /* border-bottom: 10px solid red; */
-  /* text-shadow: -6px 6px rgba(0, 0, 0, 0.35); */
 }
 
 span {
