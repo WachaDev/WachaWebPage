@@ -5,7 +5,7 @@ import App from "./App";
 import router from "./router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFire, faAngleDown, faCircleArrowRight, faCircle } from "@fortawesome/free-solid-svg-icons"
+import { faFire, faAngleDown, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { faLightbulb, faCalendarCheck } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 

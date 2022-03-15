@@ -1,9 +1,8 @@
 <template>
   <section class="section">
-    <!-- TODO: Pass the value throught a prop. -->
     <div class="section-container">
       <div class="section-left-side">
-        <Title text="Who am I?" />
+        <Title :text="title" />
         <div class="subtitle-container">
           <h1 class="subtitle">
             {{ subtitle }}

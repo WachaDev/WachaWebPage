@@ -1,8 +1,9 @@
 <template>
-  <div class="main-content">
+  <div>
     <Dashboard />
     <Aptitudes />
     <Section
+      title="Who Am I?"
       subtitle="A very dedicated person offering his services Lorem ipsum dolor sit amet."
       paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Culpa nam quam, dolorem pariatur placeat corrupti inventore

@@ -71,6 +71,7 @@ export default {
 <style scoped>
 #dashboard {
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 #dashboard-container {

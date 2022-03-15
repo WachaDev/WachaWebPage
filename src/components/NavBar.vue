@@ -18,10 +18,10 @@
           @mouseleave="toggleServiceMenu(false)"
           class="route-container"
         >
-          <a class="route" to="#"
+          <label class="route" to="#"
             >SERVICES
             <font-awesome-icon icon="fa-solid fa-angle-down" />
-          </a>
+          </label>
           <div id="service-menu" ref="servicesMenu">
             <div class="services-container">
               <li class="view">Developer<i class="fas fa-code"></i></li>
@@ -47,7 +47,7 @@
 export default {
   methods: {
     toggleServiceMenu: function(open) {
-      let menu = this.$refs.servicesMenu;
+      const menu = this.$refs.servicesMenu;
       let menuHeight = menu.style.height;
 
       if (open && menuHeight <= "0px") {
