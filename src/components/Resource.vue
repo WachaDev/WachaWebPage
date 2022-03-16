@@ -1,11 +1,16 @@
 <template>
   <div class="resource">
     <div class="resource-card">
-      <img class="resource-img" :src="image" alt="" />
+      <img
+        class="resource-img"
+        :src="image"
+        :style="{ 'height': height, 'width': width }"
+        alt=""
+      />
     </div>
     <div class="resource-description">
-      <h3>{{ name }}</h3>
-      <h4>{{ tagline }}</h4>
+      <h4 class="tagline">{{ tagline }}</h4>
+      <h3 class="name">{{ name }}</h3>
     </div>
   </div>
 </template>
@@ -24,30 +29,44 @@ export default {
     tagline: {
       type: String,
       required: true
-    }
+    },
+    // height: {
+    //   type: String,
+    //   default: "80px"
+    // },
+    // width: {
+    //   type: String,
+    //   default: "80px"
+    // }
   }
-}
+};
 </script>
 
 <style scoped>
 .resource {
   display: flex;
+  align-content: center;
   padding: 1.5rem;
   background: #f3f3f3;
-  width: fit-content;
   border-radius: 10px;
-}
-
-.resource-card {
-}
-
-.resource-img {
-  height: 80px;
-  width: 80px;
+  margin-top: 10px;
+  max-height: 12rem;
+  height: 8rem;
+  width: auto;
 }
 
 .resource-description {
   display: flex;
   flex-direction: column;
+  align-self: center;
+}
+
+.resource-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.name {
+  color: black;
 }
 </style>

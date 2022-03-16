@@ -50,6 +50,7 @@ export default {
       const menu = this.$refs.servicesMenu;
       let menuHeight = menu.style.height;
 
+      // Change up arrow to down arrow
       if (open && menuHeight <= "0px") {
         menu.style.height = "5.5rem";
         menu.style.border = "2px solid #ffff";

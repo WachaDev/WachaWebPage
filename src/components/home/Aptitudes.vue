@@ -1,6 +1,6 @@
 <template>
   <section id="aptitudes" class="section">
-    <Title :text="'Why me?'"/>
+    <Title text="Why me?"/>
     <div id="aptitudes-container">
       <div id="skilled">
         <div class="aptitude-container">
@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import Title from "../Title"
+import Title from "../Title";
 
 export default {
   components: {

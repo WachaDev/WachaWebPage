@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Dashboard />
+    <Banner />
     <Aptitudes />
     <Section
       title="Who Am I?"
@@ -12,22 +12,22 @@
           placeat exercitationem ea necessitatibus, odio"
       picture="https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y"
     />
-    <HomeGallery />
+    <GallerySelector/>
   </div>
 </template>
 
 <script>
-import Dashboard from "../components/uniques/Dashboard";
-import Aptitudes from "../components/uniques/Aptitudes";
+import Banner from "../components/home/Banner";
+import Aptitudes from "../components/home/Aptitudes";
 import Section from "../components/Section1";
-import HomeGallery from "../components/uniques/HomeGallery";
+import GallerySelector from "../components/home/GallerySelector";
 
 export default {
   components: {
-    Dashboard,
+    Banner,
     Aptitudes,
     Section,
-    HomeGallery,
+    GallerySelector,
   }
 };
 </script>

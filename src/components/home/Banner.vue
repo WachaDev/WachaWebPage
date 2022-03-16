@@ -1,13 +1,13 @@
 <template>
-  <section id="dashboard">
-    <div id="dashboard-container">
-      <div class="dashboard-top-container">
-        <div id="dashboard-left-side">
-          <div id="dashboard-title-container">
-            <h1 id="dashboard-title">
+  <section id="banner">
+    <div id="banner-container">
+      <div class="banner-top-container">
+        <div id="banner-left-side">
+          <div id="banner-title-container">
+            <h1 id="banner-title">
               WachaOut!
             </h1>
-            <h4 id="dashboard-subtext">
+            <h4 id="banner-subtext">
               What are you looking for? web pages, game development, nice drawings,
               a good interview...
             </h4>
@@ -46,7 +46,7 @@
           </div>
         </div>
 
-        <div id="dashboard-right-side">
+        <div id="banner-right-side">
           <div class="entire-logo">
             <div class="logo">
               <img id="logo-image" alt="" />
@@ -69,19 +69,19 @@ export default {
 </script>
 
 <style scoped>
-#dashboard {
+#banner {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
-#dashboard-container {
+#banner-container {
   background: #F90716;
   border-width: 10px;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
 
-.dashboard-top-container {
+.banner-top-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-left: 10rem;
@@ -90,7 +90,7 @@ export default {
   margin-left: 15rem;
 }
 
-#dashboard-left-side {
+#banner-left-side {
   text-align: left;
 }
 
@@ -107,13 +107,13 @@ export default {
   height: 20rem;
 }
 
-#dashboard-right-side {
+#banner-right-side {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#dashboard-title {
+#banner-title {
   font-family: "Fugaz One", cursive;
   font-size: 4rem;
   text-shadow: -6px 6px rgb(0, 0, 0, 0.7);
@@ -121,13 +121,13 @@ export default {
   letter-spacing: 1px;
 }
 
-#dashboard-title-container {
+#banner-title-container {
   margin-bottom: 1rem;
   margin-top: 1rem;
   border-bottom: 9px double #ffff;
 }
 
-#dashboard-subtext {
+#banner-subtext {
   color: #ffff;
   font-size: 1.2rem;
   padding-top: 0.5rem;
