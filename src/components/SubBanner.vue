@@ -1,8 +1,15 @@
 <template>
   <section class="subbanner section">
-    <h1 class="title">Web Development</h1>
+    <h1 class="title">{{ title }}</h1>
   </section>
 </template>
+
+<script>
+export default {
+  props: { title: String }
+}
+</script>
+
 
 <style scoped>
 .subbanner {

@@ -73,7 +73,6 @@ export default {
 </script>
 
 <style scoped>
-
 .section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

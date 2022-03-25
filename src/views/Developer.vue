@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SubBanner/>
+    <!-- <SubBanner title="Web Development"/> -->
     <Resources/>
   </div>
 </template>
