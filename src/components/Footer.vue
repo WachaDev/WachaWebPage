@@ -9,7 +9,7 @@
       </div>
         <div class="summary-container">
           <p class="summary">
-            <!-- A quick description of what this site is, e.x: this a portafolio about... -->
+            <!-- A quick description of what this site is, e.g: this a portafolio about... -->
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
             quam eveniet voluptatem sunt, voluptatibus eos nihil iure obcaecati
             asperiores cupiditate sequi tempora adipisci, quasi distinctio

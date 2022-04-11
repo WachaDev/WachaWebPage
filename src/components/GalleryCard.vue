@@ -47,20 +47,14 @@ export default {
   },
   methods: {
     toggleFocusStyle: function(focus) {
-      const card = this.$refs.card.style;
       const cardContainer = this.$refs.cardContainer.style;
 
       if (focus) {
-        card.display = "absolute";
         cardContainer.background = "#c9050c";
         cardContainer.padding = "2rem";
-        return;
-      }
-
-      if (!focus) {
+      } else {
         cardContainer.background = "#c9050cd5";
         cardContainer.padding = "24px";
-        return;
       }
     }
   }
@@ -68,7 +62,7 @@ export default {
 </script>
 
 <style scoped>
-/* the top margin triggers the icon animation */
+/* FIXME: the top margin triggers the icon animation */
 #card {
   background-repeat: no-repeat;
   background-size: 100% 100%;
