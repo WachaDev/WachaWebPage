@@ -72,6 +72,10 @@ li {
   list-style: none;
 }
 
+textarea {
+  resize: none;
+}
+
 .section {
   background: #ffff;
   width: 100%;

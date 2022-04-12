@@ -33,10 +33,10 @@
       </li>
       <li>
         <div class="route-container">
-          <router-link class="route " to="/contact">CONTACT</router-link>
+          <router-link class="route " to="/contact">CONTACTS</router-link>
         </div>
       </li>
-      <li>
+      <li class="support">
         <router-link class="route" to="/support">SUPPORT</router-link>
       </li>
     </ul>
@@ -51,16 +51,12 @@ export default {
       let menuHeight = menu.style.height;
 
       // Change up arrow to down arrow
-      if (open && menuHeight <= "0px") {
+      if (open) {
         menu.style.height = "5.5rem";
         menu.style.border = "2px solid #ffff";
-        return;
-      }
-
-      if (!open && menuHeight > "0px") {
+      } else {
         menu.style.height = "0px";
         menu.style.border = "none";
-        return;
       }
     }
   }
@@ -89,22 +85,28 @@ export default {
 #logo-container {
   margin-right: auto;
   padding: 1rem;
+  align-self: center;
 }
 
 #routes-container {
   display: flex;
-  justify-content: right;
-  padding: 1rem;
+  /* padding: 1rem; */
+}
+
+#routes-container * {
+  align-self: center;
 }
 
 .route-container {
-  border-right: 2px solid white;
+  /* border-right: 2px solid white; */
+  align-self: center;
 }
 
 .route {
   color: #ffff;
   padding: 0.5rem;
   margin: 8px;
+  align-self: center;
 }
 
 .route:hover:not(.router-link-exact-active),
@@ -146,5 +148,11 @@ export default {
 
 i {
   margin-left: 5px; 
+}
+
+.support {
+  border-radius: 8px;
+  border: 4px solid white;
+  padding: 0.5rem;
 }
 </style>

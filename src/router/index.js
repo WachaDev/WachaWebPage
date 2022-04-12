@@ -5,6 +5,7 @@ import Home from "@/views/Home";
 import Developer from "@/views/Developer";
 import Illustrator from "@/views/Illustrator";
 import Podcaster from "@/views/Podcaster";
+import Contact from "@/views/Contact";
 import PageNotFound from "@/views/PageNotFound";
 
 Vue.use(Router);
@@ -30,6 +31,11 @@ export default new Router({
       path: "/illustrator",
       name: "Illustrator",
       component: Illustrator
+    },
+    {
+      path: "/contact",
+      name: "Contact",
+      component: Contact
     },
     {
       path: "*",
