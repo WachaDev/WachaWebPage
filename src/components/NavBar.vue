@@ -37,7 +37,7 @@
           </router-link>
           <label class="route" to="#" v-else>
             SERVICES
-          <font-awesome-icon ref="icon" icon="fa-solid fa-angle-down" />
+            <font-awesome-icon ref="icon" icon="fa-solid fa-angle-down" />
           </label>
         </div>
       </li>
@@ -54,9 +54,24 @@
     </ul>
     <div id="service-menu" ref="servicesMenu">
       <div class="services-container">
-        <router-link to="/developer" class="view">Developer<i class="fas fa-code"></i></router-link>
-        <router-link to="illustrator" class="view">Illustrator<i class="fas fa-palette"></i></router-link>
-        <router-link to="/podcaster" class="view">Podcaster<i class="fas fa-microphone"></i></router-link>
+        <router-link
+          @click.native="toggleServiceMenu()"
+          to="/developer"
+          class="view"
+          >Developer<i class="fas fa-code"></i
+        ></router-link>
+        <router-link
+          @click.native="toggleServiceMenu()"
+          to="illustrator"
+          class="view"
+          >Illustrator<i class="fas fa-palette"></i
+        ></router-link>
+        <router-link
+          @click.native="toggleServiceMenu()"
+          to="/podcaster"
+          class="view"
+          >Podcaster<i class="fas fa-microphone"></i
+        ></router-link>
       </div>
     </div>
   </nav>
@@ -64,18 +79,24 @@
 
 <script>
 export default {
+  data: function() {
+    return {
+      isOpen: false
+    };
+  },
   methods: {
     toggleServiceMenu: function() {
       const menu = this.$refs.servicesMenu;
-      let open = menu.style.height > "0rem" ? true : false;
 
-      if (open) {
+      if (this.isOpen) {
         menu.style.height = "0px";
         menu.style.padding = "0rem";
       } else {
         menu.style.height = "fit-content";
         menu.style.padding = "1rem";
       }
+
+      this.isOpen = !this.isOpen;
     }
   },
   computed: {

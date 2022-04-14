@@ -20,10 +20,16 @@ export default {
 };
 </script>
 <style>
-/* Fonts: Fira Sans, Fugaz One, Lobster, Anton and Righteous */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+/* Fugaz One */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+/* Fira Sans */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Righteous */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* Lobster Two */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Anton */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
   box-sizing: border-box;

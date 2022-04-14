@@ -7,21 +7,21 @@
         image="/static/placeholders/code.jpg"
         title="CodeMadness"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
-        font="Anton"
+        fontFamily="Anton"
       />
       <GalleryCard
         route="/podcaster"
         image="/static/placeholders/podcast.jpg"
         title="Talking Sh*t"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
-        font="Righteous"
+        fontFamily="Righteous"
       />
       <GalleryCard
         route="/illustrator"
         image="/static/placeholders/draw.jpg"
         title="Magnum Opus"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
-        font="Lobster"
+        fontFamily="Lobster Two"
       />
     </div>
   </div>

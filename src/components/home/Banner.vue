@@ -8,8 +8,8 @@
               WachaOut!
             </h1>
             <h4 id="banner-subtext">
-              What are you looking for? web pages, game development, nice drawings,
-              a good interview...
+              What are you looking for? web pages, game development, nice
+              drawings, a good interview...
             </h4>
           </div>
           <div class="contact-for">
@@ -18,30 +18,21 @@
               @click="redirect('/developer')"
             >
               Developer
-              <i
-                id="developer-btn-icon"
-                class="fas fa-code hvr-icon"
-              ></i>
+              <i id="developer-btn-icon" class="fas fa-code hvr-icon"></i>
             </button>
             <button
               class="podcaster-btn  hvr-fade hvr-icon-up"
               @click="redirect('/podcaster')"
             >
               Podcaster
-              <i
-                id="podcaster-btn-icon"
-                class="fas fa-microphone hvr-icon"
-              ></i>
+              <i id="podcaster-btn-icon" class="fas fa-microphone hvr-icon"></i>
             </button>
             <button
               class="illustrator-btn hvr-fade hvr-icon-up"
               @click="redirect('/illustrator')"
             >
               Illustrator
-              <i
-                id="illustrator-btn-icon"
-                class="fas fa-palette hvr-icon"
-              ></i>
+              <i id="illustrator-btn-icon" class="fas fa-palette hvr-icon"></i>
             </button>
           </div>
         </div>
@@ -63,7 +54,7 @@ export default {
   methods: {
     redirect: function(path) {
       this.$router.push({ path });
-    },
+    }
   }
 };
 </script>
@@ -75,7 +66,7 @@ export default {
 }
 
 #banner-container {
-  background: #F90716;
+  background: #f90716;
   border-width: 10px;
   padding-bottom: 2rem;
   padding-top: 2rem;
@@ -168,7 +159,8 @@ export default {
 }
 
 .illustrator-btn {
-  font-family: "Lobster", cursive;
+  font-family: "Lobster Two", cursive;
+  font-weight: bold;
 }
 
 #arrow-btn-container {

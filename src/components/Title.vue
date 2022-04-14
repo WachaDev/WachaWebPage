@@ -20,9 +20,8 @@ export default {
 /* TODO: Undestand this pls */
  
 .title {
-  font-family: "Fugaz One";
+  font-family: "Fira Sans";
   font-size: 2.5rem;
-  letter-spacing: 1px;
   font-weight: bold;
   color: black;
   text-align: left;
@@ -37,9 +36,10 @@ span::after {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 1px;
+  width: 50px;
+  /* height: 2px; */
   border-bottom: 10px solid #c9050b;
   content: "";
+  border-radius: 8px;
 }
 </style>

@@ -5,15 +5,21 @@
       <div class="form-container">
         <form action="#">
           <div class="top-controls">
-            <input type="text" placeholder="NAME" required autofocus />
-            <input type="text" placeholder="EMAIL" required />
+            <div>
+              <label class="control-label" for="">Name</label>
+              <input type="text" placeholder="Your name" required autofocus />
+            </div>
+            <div>
+              <label class="control-label" for="">Email</label>
+            <input type="text" placeholder="name@example.com" required />
+            </div>
           </div>
           <textarea
             name="textarea"
             id="textarea"
             cols="30"
             rows="10"
-            placeholder="WRITE A MESSAGE"
+            placeholder="A quick message"
             required
           ></textarea>
           <button class="submit-btn" type="submit">SUBMIT</button>
@@ -100,6 +106,7 @@ export default {
   padding-bottom: 1rem;
   padding-top: 1rem;
   padding-left: 8px;
+  font-family: "Fira Sans";
 }
 
 .submit-btn {
@@ -108,6 +115,10 @@ export default {
   background-color: black;
   color: white;
   padding: 1rem;
+}
+
+.control-label {
+  color: black;
 }
 
 .emails {

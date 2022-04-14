@@ -7,9 +7,14 @@
       @mouseover="toggleFocusStyle(true)"
       @mouseleave="toggleFocusStyle(false)"
     >
-      <div class="card-container" ref="cardContainer">
+      <div ref="cardContainer" class="card-container">
         <div class="content">
-          <h1 class="title" :style="{ 'font-family': font }">{{ title }}</h1>
+          <h1
+            class="title"
+            :style="{ 'font-family': fontFamily, 'font-size': fontSize }"
+          >
+            {{ title }}
+          </h1>
           <p>{{ description }}</p>
           <div class="see-more ">
             See more
@@ -43,18 +48,20 @@ export default {
       type: String,
       required: true
     },
-    font: String
+    fontFamily: String,
+    fontSize: String
   },
   methods: {
     toggleFocusStyle: function(focus) {
+      const card = this.$refs.card.style;
       const cardContainer = this.$refs.cardContainer.style;
 
       if (focus) {
+        card.transform = "scale(1.05)";
         cardContainer.background = "#c9050c";
-        cardContainer.padding = "2rem";
       } else {
+        card.transform = "scale(1)";
         cardContainer.background = "#c9050cd5";
-        cardContainer.padding = "24px";
       }
     }
   }
