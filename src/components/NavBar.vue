@@ -13,22 +13,32 @@
         </li>
       </div>
       <li>
-        <div
-          @mouseover="toggleServiceMenu(true)"
-          @mouseleave="toggleServiceMenu(false)"
-          class="route-container"
-        >
-          <label class="route" to="#"
-            >SERVICES
+        <div @click="toggleServiceMenu()">
+          <router-link
+            class="route"
+            to="/developer"
+            v-if="currentRoute === 'Developer'"
+            >DEVELOPER
             <font-awesome-icon icon="fa-solid fa-angle-down" />
+          </router-link>
+          <router-link
+            class="route"
+            to="/illustrator"
+            v-else-if="currentRoute === 'Illustrator'"
+            >ILLUSTRATOR
+            <font-awesome-icon icon="fa-solid fa-angle-down" />
+          </router-link>
+          <router-link
+            class="route"
+            to="/podcaster"
+            v-else-if="currentRoute === 'Podcaster'"
+            >PODCASTER
+            <font-awesome-icon icon="fa-solid fa-angle-down" />
+          </router-link>
+          <label class="route" to="#" v-else>
+            SERVICES
+          <font-awesome-icon ref="icon" icon="fa-solid fa-angle-down" />
           </label>
-          <div id="service-menu" ref="servicesMenu">
-            <div class="services-container">
-              <li class="view">Developer<i class="fas fa-code"></i></li>
-              <li class="view">Podcaster<i class="fas fa-microphone"></i></li>
-              <li class="view">Illustrator<i class="fas fa-palette"></i></li>
-            </div>
-          </div>
         </div>
       </li>
       <li>
@@ -37,27 +47,40 @@
         </div>
       </li>
       <li class="support">
-        <router-link class="route" to="/support">SUPPORT</router-link>
+        <router-link class="route support-btn" to="/support"
+          >SUPPORT</router-link
+        >
       </li>
     </ul>
+    <div id="service-menu" ref="servicesMenu">
+      <div class="services-container">
+        <router-link to="/developer" class="view">Developer<i class="fas fa-code"></i></router-link>
+        <router-link to="illustrator" class="view">Illustrator<i class="fas fa-palette"></i></router-link>
+        <router-link to="/podcaster" class="view">Podcaster<i class="fas fa-microphone"></i></router-link>
+      </div>
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
   methods: {
-    toggleServiceMenu: function(open) {
+    toggleServiceMenu: function() {
       const menu = this.$refs.servicesMenu;
-      let menuHeight = menu.style.height;
+      let open = menu.style.height > "0rem" ? true : false;
 
-      // Change up arrow to down arrow
       if (open) {
-        menu.style.height = "5.5rem";
-        menu.style.border = "2px solid #ffff";
-      } else {
         menu.style.height = "0px";
-        menu.style.border = "none";
+        menu.style.padding = "0rem";
+      } else {
+        menu.style.height = "fit-content";
+        menu.style.padding = "1rem";
       }
+    }
+  },
+  computed: {
+    currentRoute: function() {
+      return this.$route.name;
     }
   }
 };
@@ -69,10 +92,10 @@ export default {
   top: 0;
   display: flex;
   justify-content: flex-end;
-  padding-left: 1rem;
   padding-top: 3px;
   padding-bottom: 3px;
-  padding-right: 1rem;
+  padding-right: 7rem;
+  padding-left: 7rem;
   font-weight: 700;
   background: #f90716;
   z-index: 99;
@@ -90,7 +113,6 @@ export default {
 
 #routes-container {
   display: flex;
-  /* padding: 1rem; */
 }
 
 #routes-container * {
@@ -98,14 +120,13 @@ export default {
 }
 
 .route-container {
-  /* border-right: 2px solid white; */
   align-self: center;
 }
 
 .route {
   color: #ffff;
   padding: 0.5rem;
-  margin: 8px;
+  margin: 10px;
   align-self: center;
 }
 
@@ -116,25 +137,29 @@ export default {
 }
 
 .router-link-exact-active {
-  color: black;
-  background: rgb(255, 241, 42);
-  border-radius: 25px;
-  box-shadow: -4px 4px black;
+  border-bottom: 4px solid white;
 }
 
 #service-menu {
+  display: flex;
   position: absolute;
   overflow: hidden;
-  background: #f90716;
+  top: 4rem;
   height: 0;
-  top: 3.1rem;
-  right: 14.9rem;
-  transition: all 0.5s;
+  transition: ease 0.2s;
+  text-align: left;
+  background: white;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+#service-menu li {
+  color: #f90716;
+  display: inline;
 }
 
 .services-container .view {
-  color: #fff;
+  color: #f90716;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 1rem;
@@ -142,17 +167,22 @@ export default {
 }
 
 .view:hover {
-  color: rgb(255, 241, 42);
-  text-shadow: -2px 2px rgb(0, 0, 0, 0.7);
+  /* color: #f3f3f3; */
 }
 
 i {
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 .support {
   border-radius: 8px;
-  border: 4px solid white;
+  background: white;
   padding: 0.5rem;
+  background: rgb(255, 241, 42);
+}
+
+.support-btn {
+  /* color: #f90716; */
+  color: black;
 }
 </style>
