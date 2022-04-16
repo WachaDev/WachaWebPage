@@ -75,7 +75,6 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 29px;
   text-align: center;
-  margin-top: 5%;
 }
 
 .aptitude-container {

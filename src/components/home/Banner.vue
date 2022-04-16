@@ -13,27 +13,27 @@
             </h4>
           </div>
           <div class="contact-for">
-            <button
-              class="developer-btn hvr-fade  hvr-icon-up"
-              @click="redirect('/developer')"
+            <router-link
+              class="btn developer-btn hvr-fade  hvr-icon-up"
+              to="/developer"
             >
               Developer
               <i id="developer-btn-icon" class="fas fa-code hvr-icon"></i>
-            </button>
-            <button
-              class="podcaster-btn  hvr-fade hvr-icon-up"
-              @click="redirect('/podcaster')"
+            </router-link>
+            <router-link
+              class="btn podcaster-btn  hvr-fade hvr-icon-up"
+              to="/podcaster"
             >
               Podcaster
               <i id="podcaster-btn-icon" class="fas fa-microphone hvr-icon"></i>
-            </button>
-            <button
-              class="illustrator-btn hvr-fade hvr-icon-up"
-              @click="redirect('/illustrator')"
+            </router-link>
+            <router-link
+              class="btn illustrator-btn hvr-fade hvr-icon-up"
+              to="/illustrator"
             >
               Illustrator
               <i id="illustrator-btn-icon" class="fas fa-palette hvr-icon"></i>
-            </button>
+            </router-link>
           </div>
         </div>
 
@@ -48,16 +48,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  methods: {
-    redirect: function(path) {
-      this.$router.push({ path });
-    }
-  }
-};
-</script>
 
 <style scoped>
 #banner {
@@ -131,7 +121,7 @@ export default {
   padding-top: 1rem;
 }
 
-.contact-for button {
+.btn {
   cursor: pointer;
   background: white;
   color: #c9050b;
@@ -141,11 +131,12 @@ export default {
   width: 30%;
   font-size: 1.2rem;
   box-shadow: -6px 6px rgba(0, 0, 0, 10);
+  text-align: center;
 }
 
-.contact-for button:hover,
-.contact-for button:focus,
-.contact-for button:active {
+.btn:hover,
+.btn:focus,
+.btn:active {
   color: rgb(0, 0, 0);
   background: rgb(255, 241, 42);
 }

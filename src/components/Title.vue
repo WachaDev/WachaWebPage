@@ -20,11 +20,12 @@ export default {
 /* TODO: Undestand this pls */
  
 .title {
-  font-family: "Fira Sans";
+  font-family: "Fugaz One";
   font-size: 2.5rem;
   font-weight: bold;
   color: black;
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 span {

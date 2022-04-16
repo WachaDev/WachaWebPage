@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <Title class="title" text="Contact me!" />
+    <Title text="Contact me!" />
     <div class="contacts-container">
       <div class="form-container">
         <form action="#">
@@ -11,7 +11,7 @@
             </div>
             <div>
               <label class="control-label" for="">Email</label>
-            <input type="text" placeholder="name@example.com" required />
+            <input type="text" placeholder="name@example.com" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required />
             </div>
           </div>
           <textarea
@@ -63,10 +63,6 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  margin-bottom: 1rem;
-}
-
 .contacts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -99,6 +95,8 @@ export default {
   padding-left: 8px;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 #textarea {
@@ -107,12 +105,18 @@ export default {
   padding-top: 1rem;
   padding-left: 8px;
   font-family: "Fira Sans";
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
 }
 
 .submit-btn {
   cursor: pointer;
   line-height: normal;
   background-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  border: none;
   color: white;
   padding: 1rem;
 }

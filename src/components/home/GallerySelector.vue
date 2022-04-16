@@ -8,6 +8,7 @@
         title="CodeMadness"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
         fontFamily="Anton"
+        fontSize="22px"
       />
       <GalleryCard
         route="/podcaster"

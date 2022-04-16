@@ -77,7 +77,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  margin-top: 5%;
 }
 
 .card {

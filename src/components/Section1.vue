@@ -59,8 +59,7 @@ export default {
 
 .subtitle {
   font-family: "Fira Sans";
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-right-side {

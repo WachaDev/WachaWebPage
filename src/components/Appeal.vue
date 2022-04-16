@@ -34,9 +34,6 @@ export default {
 </script>
 
 <style scoped>
-.top-container {
-  margin-top: 2.5rem;
-}
 .cite-container {
   margin-top: 15px;
   text-align: right;

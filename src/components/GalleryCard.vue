@@ -1,12 +1,6 @@
 <template>
   <router-link :to="route" class="hvr-icon-forward">
-    <div
-      id="card"
-      ref="card"
-      :style="{ 'background-image': `url(${image})` }"
-      @mouseover="toggleFocusStyle(true)"
-      @mouseleave="toggleFocusStyle(false)"
-    >
+    <div id="card" ref="card" :style="{ 'background-image': `url(${image})` }">
       <div ref="cardContainer" class="card-container">
         <div class="content">
           <h1
@@ -16,12 +10,14 @@
             {{ title }}
           </h1>
           <p>{{ description }}</p>
-          <div class="see-more ">
-            See more
-            <font-awesome-icon
-              icon="fa-solid fa-circle-arrow-right"
-              class="hvr-icon"
-            />
+          <div class="btn-container">
+            <button class="see-more ">
+              See more
+              <font-awesome-icon
+                icon="fa-solid fa-circle-arrow-right"
+                class="hvr-icon"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -50,39 +46,28 @@ export default {
     },
     fontFamily: String,
     fontSize: String
-  },
-  methods: {
-    toggleFocusStyle: function(focus) {
-      const card = this.$refs.card.style;
-      const cardContainer = this.$refs.cardContainer.style;
-
-      if (focus) {
-        card.transform = "scale(1.05)";
-        cardContainer.background = "#c9050c";
-      } else {
-        card.transform = "scale(1)";
-        cardContainer.background = "#c9050cd5";
-      }
-    }
   }
 };
 </script>
 
 <style scoped>
-/* FIXME: the top margin triggers the icon animation */
 #card {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 14rem;
-  margin-top: 2rem;
   border-radius: 10px;
-  transition: all 0.5s;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  transition: all 0.2s;
+}
+
+#card:hover {
+  transform: scale(1.05);
+  background: "#c9050c";
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 15px 25px;
 }
 
 .card-container {
-  background: #c9050cd5;
-  text-align: left;
+  background: #c9050c;
   color: #ffff;
   font-size: 1.1rem;
   padding: 1.5rem;
@@ -97,7 +82,19 @@ export default {
   letter-spacing: 1px;
 }
 
+.btn-container {
+  text-align: center;
+}
+
 .see-more {
+  font-family: "Fira Sans";
+  margin-top: 10px;
   text-align: right;
+  background: white;
+  color: #c9050c;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
 }
 </style>
